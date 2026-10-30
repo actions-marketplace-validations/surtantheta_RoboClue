@@ -1,0 +1,18 @@
+name: A robotics workflow to support
+description: Describe a recurring decision and the artifacts available to check it.
+title: "[Workflow] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What decision are you trying to make?
+      description: Explain the current workflow, failure and existing native tools you have tried.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Available evidence and expected outcome
+      description: Name the framework/source revision, inputs, intended criterion and a healthy control if possible. Remove private data.
+    validations:
+      required: true

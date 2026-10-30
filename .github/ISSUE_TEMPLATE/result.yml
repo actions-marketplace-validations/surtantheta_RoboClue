@@ -1,0 +1,23 @@
+name: Wrong or confusing result
+description: A false alarm, missed contradiction or unclear next step.
+title: "[Result] "
+body:
+  - type: textarea
+    id: setup
+    attributes:
+      label: Environment and exact command
+      description: Include Python, installed distribution/framework versions and CLI arguments or MCP request. Remove secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Intended behavior and actual result
+      description: Include the relevant component status, coverage and source witness. Explain why the intended criterion should hold.
+    validations:
+      required: true
+  - type: textarea
+    id: reproducer
+    attributes:
+      label: Small reproducer or pinned public input
+      description: A generated example or healthy control is useful; full weights/datasets are unnecessary.

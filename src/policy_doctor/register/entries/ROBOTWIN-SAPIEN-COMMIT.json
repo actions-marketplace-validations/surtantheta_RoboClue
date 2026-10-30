@@ -1,0 +1,66 @@
+{
+  "applies_when": [
+    {
+      "checkpoint_id_in": [
+        "robbyant/lingbot-va-posttrain-robotwin",
+        "Robbyant/lingbot-va-posttrain-robotwin"
+      ]
+    }
+  ],
+  "claim_basis": "release_metadata",
+  "evidence": [
+    {
+      "basis": "user_report",
+      "quote": "and switching the version of robotwin by `cd RoboTwin && git checkout 2eeec322`.",
+      "source": {
+        "line": 145,
+        "path": "README.md",
+        "repo": "Robbyant/lingbot-va",
+        "sha": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb"
+      },
+      "url": "https://github.com/Robbyant/lingbot-va/issues/27#issuecomment-4146806301"
+    },
+    {
+      "basis": "user_report",
+      "quote": "My sapien version is 3.0.2(different from the required 3.0.0b1)",
+      "source": {
+        "line": 4,
+        "path": "script/requirements.txt",
+        "repo": "RoboTwin-Platform/RoboTwin",
+        "sha": "2eeec322d95799f537cbfe5f291a8220d965ccb8"
+      },
+      "url": "https://github.com/Robbyant/lingbot-va/issues/27#issuecomment-4140660772"
+    }
+  ],
+  "first_fix": "Follow lingbot-va's README: install sapien==3.0.0b1 in the RoboTwin client environment and check out RoboTwin 2eeec322 (git checkout 2eeec322) before comparing with the published RoboTwin numbers.",
+  "healthy_controls": [
+    "The declared RoboTwin checkpoint with publisher SAPIEN 3.0.0b1: consistent",
+    "An explicitly complete unrelated selected stack: not applicable; aggregate unassessed UNKNOWN"
+  ],
+  "id": "ROBOTWIN-SAPIEN-COMMIT",
+  "kind": "version_trap",
+  "last_verified": "2026-10-29",
+  "schema_version": 1,
+  "severity": "WARNING",
+  "stacks": [
+    "robotwin",
+    "sapien",
+    "lingbot-va"
+  ],
+  "title": "LingBot-VA RoboTwin evaluation declares SAPIEN >=3.0.0 instead of the publisher 3.0.0b1 setup; a public report changed SAPIEN and the RoboTwin commit together; the open-ended threshold is a prospective risk warning, not verification of every later release",
+  "unknown_when": "Supply an explicit LingBot-VA RoboTwin checkpoint identity and exact SAPIEN release. The corrected 3.0.0b1 is consistent for this predicate. The warning uses PEP 440 ordering >=3.0.0, including later-version prereleases; it does not claim every version was reproduced. Other versions below that boundary are outside the warning. This entry does not inspect or attest the RoboTwin commit. Unrecognized checkpoint identities remain UNKNOWN. The threshold extrapolates the pinned public case as a prospective WARNING, not proof of arbitrary future behavior.",
+  "validation": {
+    "record": "content/VERDICT.md",
+    "status": "confirmed"
+  },
+  "violation_when": [
+    {
+      "package_version": {
+        "package": "sapien",
+        "version": {
+          "gte": "3.0.0"
+        }
+      }
+    }
+  ]
+}

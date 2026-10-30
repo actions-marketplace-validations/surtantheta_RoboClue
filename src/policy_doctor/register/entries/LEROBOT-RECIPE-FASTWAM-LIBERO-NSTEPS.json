@@ -1,0 +1,69 @@
+{
+  "applies_when": [
+    {
+      "checkpoint_id_in": [
+        "lerobot/fastwam_libero_uncond_2cam224"
+      ]
+    }
+  ],
+  "claim_basis": "release_metadata",
+  "evidence": [
+    {
+      "basis": "publisher_recipe",
+      "quote": "--policy.n_action_steps=10",
+      "source": {
+        "line": 163,
+        "path": "docs/source/fastwam.mdx",
+        "repo": "huggingface/lerobot",
+        "sha": "72e1d9e5e76ee719bacfc78bc34d817bee5fb521"
+      },
+      "url": "https://github.com/huggingface/lerobot/blob/72e1d9e5e76ee719bacfc78bc34d817bee5fb521/docs/source/fastwam.mdx#L163"
+    },
+    {
+      "basis": "publisher_recipe",
+      "quote": "lerobot/fastwam_libero_uncond_2cam224",
+      "source": {
+        "line": 81,
+        "path": "docs/source/fastwam.mdx",
+        "repo": "huggingface/lerobot",
+        "sha": "72e1d9e5e76ee719bacfc78bc34d817bee5fb521"
+      },
+      "url": "https://github.com/huggingface/lerobot/blob/72e1d9e5e76ee719bacfc78bc34d817bee5fb521/docs/source/fastwam.mdx#L81"
+    }
+  ],
+  "first_fix": "Set n_action_steps to 10 to reproduce this exact published setup.",
+  "healthy_controls": [
+    "The declared checkpoint with exact typed n_action_steps=10: consistent",
+    "An explicitly complete unrelated selected stack: not applicable; aggregate remains unassessed"
+  ],
+  "id": "LEROBOT-RECIPE-FASTWAM-LIBERO-NSTEPS",
+  "kind": "recipe",
+  "last_verified": "2026-10-29",
+  "recipe_field": {
+    "checkpoint": "lerobot/fastwam_libero_uncond_2cam224",
+    "field": "n_action_steps",
+    "published_value": 10,
+    "source_index": 0,
+    "status": "published"
+  },
+  "schema_version": 1,
+  "severity": "WARNING",
+  "stacks": [
+    "lerobot"
+  ],
+  "title": "Compare the explicit typed evaluation configuration with the pinned publisher recipe",
+  "unknown_when": "Supply an explicitly declared lerobot/fastwam_libero_uncond_2cam224 checkpoint identity, the complete selected stack list, and the actual resolved evaluation configuration containing typed n_action_steps. Absent flags do not establish a runtime value; raw launch text is not parsed into this field. An unrecognized alias, missing field or missing config remains UNKNOWN. This single-field comparison does not attest execution, framework/simulator compatibility, historical training configuration or scores. Other unpublished fields remain unassessed.",
+  "validation": {
+    "record": "docs/REGISTER_PRODUCTION_ACCEPTANCE.md#lerobot-recipe-fastwam-libero-nsteps",
+    "status": "confirmed"
+  },
+  "violation_when": [
+    {
+      "config_key": {
+        "op": "ne",
+        "path": "n_action_steps",
+        "value": 10
+      }
+    }
+  ]
+}

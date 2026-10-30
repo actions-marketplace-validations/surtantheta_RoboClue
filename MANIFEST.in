@@ -1,0 +1,14 @@
+include LICENSE README.md DEVELOPMENT.md CONTRIBUTING.md SECURITY.md CITATION.cff
+include .gitignore .gitattributes
+include action.yml .pre-commit-hooks.yaml
+include LICENSE-APACHE-2.0 LICENSE-ISAACLAB-BSD-3-CLAUSE THIRD_PARTY_NOTICES.md
+recursive-include constraints *.txt
+recursive-include examples *.py *.md *.json *.safetensors
+recursive-include scripts *.py
+recursive-include tests *.py *.json *.safetensors *.txt *.yaml *.yml *.md
+recursive-include tests/fixtures LICENSE*
+recursive-include docs *.md *.json
+recursive-include assets *.svg *.gif *.mp4 *.json
+recursive-include .github *.md *.yml *.yaml
+recursive-include .agents/skills *.md *.yaml
+recursive-include src/policy_doctor/data *.json *.txt

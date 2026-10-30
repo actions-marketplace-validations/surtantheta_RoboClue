@@ -1,0 +1,116 @@
+"""Reviewed Arena numeric profile data; no upstream config/code execution.
+
+Exact source attribution: IsaacLab-Arena8b4a3a47fc53de23e8205089d71109a2e2348acd.
+This semantic baseline is distinct from the actual supplied config raw-byte identity.
+"""
+
+PROFILE_REVISION = '8b4a3a47fc53de23e8205089d71109a2e2348acd'
+
+EXPECTED_CONFIG = {'data_root': '/datasets/isaaclab_arena/static_apple_tutorial',
+ 'language_instruction': 'move the apple to the plate',
+ 'task_index': 3,
+ 'hdf5_name': 'arena_g1_static_apple_dataset_recorded.hdf5',
+ 'state_name_sim': 'robot_joint_pos',
+ 'left_eef_pos_name_sim': 'left_eef_pos',
+ 'left_eef_quat_name_sim': 'left_eef_quat',
+ 'right_eef_pos_name_sim': 'right_eef_pos',
+ 'right_eef_quat_name_sim': 'right_eef_quat',
+ 'teleop_base_height_command_name_sim': 'base_height_cmd',
+ 'teleop_navigate_command_name_sim': 'navigate_cmd',
+ 'teleop_torso_orientation_rpy_command_name_sim': 'torso_orientation_rpy_cmd',
+ 'action_name_sim': 'processed_actions',
+ 'pov_cam_name_sim': 'robot_head_cam_rgb',
+ 'state_name_lerobot': 'observation.state',
+ 'action_name_lerobot': 'action',
+ 'action_eef_name_sim': 'action.eef',
+ 'video_name_lerobot': 'observation.images.ego_view',
+ 'task_description_lerobot': 'annotation.human.task_description',
+ 'chunks_size': 1000,
+ 'fps': 50,
+ 'data_path': 'data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet',
+ 'video_path': 'videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4',
+ 'modality_template_path': 'isaaclab_arena_gr00t/embodiments/g1/modality.json',
+ 'modality_fname': 'modality.json',
+ 'episodes_fname': 'episodes.jsonl',
+ 'tasks_fname': 'tasks.jsonl',
+ 'info_template_path': 'isaaclab_arena_gr00t/embodiments/g1/info.json',
+ 'info_fname': 'info.json',
+ 'policy_joints_config_path': 'isaaclab_arena_gr00t/embodiments/g1/gr00t_43dof_joint_space.yaml',
+ 'robot_type': 'unitree_g1',
+ 'action_joints_config_path': 'isaaclab_arena_gr00t/embodiments/g1/43dof_joint_space.yaml',
+ 'state_joints_config_path': 'isaaclab_arena_gr00t/embodiments/g1/43dof_joint_space.yaml',
+ 'original_image_size': [480, 640, 3],
+ 'target_image_size': [480, 640, 3]}
+
+CODE_HASHES = {'isaaclab_arena_gr00t/lerobot/convert_hdf5_to_lerobot.py': '0c837c3176a4ab0ed32fa71081daabc04e1c777963d65b828e3599a1b80ac8dc',
+ 'isaaclab_arena_gr00t/lerobot/config/dataset_config.py': '400faef86090824ac7f334b199916fa7544cfd8d1fc2575245a73a78fe834ec1',
+ 'isaaclab_arena_gr00t/utils/joints_conversion.py': 'a9e1f3638be222221484129a2ee8c2a776275c685bd8aa07269c13618dd66386',
+ 'isaaclab_arena_gr00t/utils/robot_joints.py': '510bf5507ed45e021e01a3fe8f26b5fd5ab6a31e035c1d5a16a72c72a7673206',
+ 'isaaclab_arena_gr00t/utils/io_utils.py': '1e72d6b8ad862388180e253203d359d4abd6bcc75000dc37fb00d4404e6716a5'}
+
+REFERENCE_HASHES = {'modality_template_path': '36dcaef30bb34a4c0337775932d83ea7b79b36f19e3a715239bab6852a09d9cc',
+ 'policy_joints_config_path': '28226939039bd29fce7bf93d7f3fccce66bd3aa74a4c49e89d8229cd946357ae',
+ 'action_joints_config_path': 'ff7db8a6e4da8cb6ad40329bf0f5175de00d60f804e39c7183dc7d3c2e7d24a7',
+ 'state_joints_config_path': 'ff7db8a6e4da8cb6ad40329bf0f5175de00d60f804e39c7183dc7d3c2e7d24a7',
+ 'info_template_path': '8409bf66bc1efd58942c429b797667c950683d94e38f7427611c808cebee2b0f'}
+
+JOINT_NAMES = ('left_hip_pitch_joint',
+ 'right_hip_pitch_joint',
+ 'waist_yaw_joint',
+ 'left_hip_roll_joint',
+ 'right_hip_roll_joint',
+ 'waist_roll_joint',
+ 'left_hip_yaw_joint',
+ 'right_hip_yaw_joint',
+ 'waist_pitch_joint',
+ 'left_knee_joint',
+ 'right_knee_joint',
+ 'left_shoulder_pitch_joint',
+ 'right_shoulder_pitch_joint',
+ 'left_ankle_pitch_joint',
+ 'right_ankle_pitch_joint',
+ 'left_shoulder_roll_joint',
+ 'right_shoulder_roll_joint',
+ 'left_ankle_roll_joint',
+ 'right_ankle_roll_joint',
+ 'left_shoulder_yaw_joint',
+ 'right_shoulder_yaw_joint',
+ 'left_elbow_joint',
+ 'right_elbow_joint',
+ 'left_wrist_roll_joint',
+ 'right_wrist_roll_joint',
+ 'left_wrist_pitch_joint',
+ 'right_wrist_pitch_joint',
+ 'left_wrist_yaw_joint',
+ 'right_wrist_yaw_joint',
+ 'left_hand_index_0_joint',
+ 'left_hand_middle_0_joint',
+ 'left_hand_thumb_0_joint',
+ 'right_hand_index_0_joint',
+ 'right_hand_middle_0_joint',
+ 'right_hand_thumb_0_joint',
+ 'left_hand_index_1_joint',
+ 'left_hand_middle_1_joint',
+ 'left_hand_thumb_1_joint',
+ 'right_hand_index_1_joint',
+ 'right_hand_middle_1_joint',
+ 'right_hand_thumb_1_joint',
+ 'left_hand_thumb_2_joint',
+ 'right_hand_thumb_2_joint')
+
+PATH_FIELDS = ('data_root',
+ 'hdf5_name',
+ 'modality_template_path',
+ 'policy_joints_config_path',
+ 'action_joints_config_path',
+ 'state_joints_config_path',
+ 'info_template_path')
+
+# Fixed native converter bindings; roles annotate the reviewed N1.7 G1 profile,
+# not actual consumer execution or a concatenated model action shape.
+AUXILIARY_FIELDS = (
+    ('teleop_base_height_command_name_sim', 'teleop.base_height_command', 1, 'native_action_input'),
+    ('teleop_navigate_command_name_sim', 'teleop.navigate_command', 3, 'native_action_input'),
+    ('teleop_torso_orientation_rpy_command_name_sim', 'teleop.torso_orientation_rpy_command', 3, 'additional_converter_field'),
+)
+SCALAR_FIELDS = ('language_instruction', 'task_index', 'fps')

@@ -1,0 +1,58 @@
+{
+  "applies_when": [
+    {
+      "launch_flag": {
+        "flag": "--task_suite_name",
+        "op": "eq",
+        "value": "libero_object"
+      }
+    }
+  ],
+  "claim_basis": "release_metadata",
+  "evidence": [
+    {
+      "basis": "user_report",
+      "quote": "But now the floors appear darker with MuJoCo v3.3.3:",
+      "source": {
+        "line": 10,
+        "path": "requirements.txt",
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "sha": "8f1084e3132a39270c3a13ebe37270a43ece2a01"
+      },
+      "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/issues/88"
+    }
+  ],
+  "first_fix": "Pin MuJoCo 3.3.2 in the LIBERO eval environment (pip install mujoco==3.3.2) and compare only against numbers produced with the same MuJoCo release.",
+  "healthy_controls": [
+    "mujoco==3.3.2 with --task_suite_name libero_object (the LIBERO#88 / openvla#282 fix): consistent",
+    "mujoco 3.3.3 with --task_suite_name libero_spatial: not_applicable (the rendering evidence covers LIBERO-Object only; the spatial initial-state boundary is MUJOCO-GE340-LIBERO-SPATIAL-INIT-OPENVLA)"
+  ],
+  "id": "MUJOCO-333-LIBERO-RENDER",
+  "kind": "version_trap",
+  "last_verified": "2026-10-29",
+  "launch_target": [
+    "script:experiments/robot/libero/run_libero_eval.py"
+  ],
+  "schema_version": 1,
+  "severity": "WARNING",
+  "stacks": [
+    "openvla",
+    "openvla-oft"
+  ],
+  "title": "MuJoCo >=3.3.3 on the declared LIBERO-Object evaluation differs from the floor rendering reported for the original data; compare results only under a matched simulator; the open-ended threshold is a prospective risk warning, not verification of every later release",
+  "unknown_when": "Supply the complete selected stacks, one unambiguous applicable evaluation command and an exact MuJoCo release. This entry covers only the literal single-suite command; comma-separated, reordered or alternate suite encodings are outside its declared scope. Missing or repeated flags, ambiguous shell text, absent/conflicting versions remain UNKNOWN. Metadata does not attest execution. The threshold extrapolates the cited measured deviation as a prospective WARNING; arbitrary future release behavior has not been reproduced or source-proven.",
+  "validation": {
+    "record": "content/VERDICT.md",
+    "status": "confirmed"
+  },
+  "violation_when": [
+    {
+      "package_version": {
+        "package": "mujoco",
+        "version": {
+          "gte": "3.3.3"
+        }
+      }
+    }
+  ]
+}

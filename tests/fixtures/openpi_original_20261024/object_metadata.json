@@ -1,0 +1,23 @@
+{
+  "kind": "storage#object",
+  "id": "openpi-assets/checkpoints/pi0_base/assets/droid/norm_stats.json/1748456810418896",
+  "selfLink": "https://www.googleapis.com/storage/v1/b/openpi-assets/o/checkpoints%2Fpi0_base%2Fassets%2Fdroid%2Fnorm_stats.json",
+  "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi0_base%2Fassets%2Fdroid%2Fnorm_stats.json?generation=1748456810418896&alt=media",
+  "name": "checkpoints/pi0_base/assets/droid/norm_stats.json",
+  "bucket": "openpi-assets",
+  "generation": "1748456810418896",
+  "metageneration": "1",
+  "contentType": "application/json",
+  "storageClass": "STANDARD",
+  "size": "2413",
+  "md5Hash": "mjiBOkTRND6KG0i8nLPOVQ==",
+  "crc32c": "yHfGbA==",
+  "etag": "CNCl3Jjlxo0DEAE=",
+  "timeCreated": "2025-05-28T18:26:50.464Z",
+  "updated": "2025-05-28T18:26:50.464Z",
+  "timeStorageClassUpdated": "2025-05-28T18:26:50.464Z",
+  "timeFinalized": "2025-05-28T18:26:50.464Z",
+  "metadata": {
+    "x-goog-source-etag": "\"9a38813a44d1343e8a1b48bc9cb3ce55\""
+  }
+}

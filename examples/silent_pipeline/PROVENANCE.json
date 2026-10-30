@@ -1,0 +1,12 @@
+{
+  "kind": "synthetic_example_generator",
+  "source": "Analytic arrays written for this repository; ordinary-folder and G1 processor layout follows existing repository consumer fixture semantics.",
+  "recordings": "none",
+  "groot_version": "n1.7",
+  "third_party_dataset_payloads": "none",
+  "weights_or_native_vendor_code": "none",
+  "license": "Repository MIT license applies to example code; installed dependencies keep their licenses.",
+  "dependencies": ["policy-deployment-doctor[dataset,mcp]", "pyarrow", "mcp"],
+  "package_api": "Existing preflight CLI and preflight_check MCP tool; no added product API or alias.",
+  "boundaries": ["No original-recording fidelity proof", "No full native processor/model target proof", "No training or robot-behavior proof"]
+}

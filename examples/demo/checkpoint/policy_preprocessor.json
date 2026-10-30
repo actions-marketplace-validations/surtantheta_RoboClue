@@ -1,0 +1,42 @@
+{
+  "steps": [
+    {
+      "registry_name": "relative_actions_processor",
+      "config": {
+        "enabled": true,
+        "action_names": [
+          "shoulder",
+          "gripper"
+        ],
+        "exclude_joints": [
+          "gripper"
+        ]
+      }
+    },
+    {
+      "registry_name": "normalizer_processor",
+      "config": {
+        "features": {
+          "observation.state": {
+            "type": "STATE",
+            "shape": [
+              2
+            ]
+          },
+          "action": {
+            "type": "ACTION",
+            "shape": [
+              2
+            ]
+          }
+        },
+        "norm_map": {
+          "STATE": "MEAN_STD",
+          "ACTION": "MEAN_STD"
+        },
+        "eps": 1e-08
+      },
+      "state_file": "pre.safetensors"
+    }
+  ]
+}

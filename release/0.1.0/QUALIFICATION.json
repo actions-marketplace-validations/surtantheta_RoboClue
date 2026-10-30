@@ -1,0 +1,673 @@
+{
+  "status": "PASS_FIRST_PUBLIC_RELEASE_FULL_QUALIFICATION",
+  "collector_job": "141591.caquelon",
+  "failures": [],
+  "source_commit": "d8ce313ed63c0140d458c0ee34e27d8f83fe16dd",
+  "parent_commit": "d1b71547b63158864574ba438576d5e20de91e18",
+  "source_tree_sha256": "2d9c92b572236e024882b52e8a8bba09382186cc1f7ff5a701472d08f84147a8",
+  "public_version": "0.1.0",
+  "source_files": 634,
+  "wheel": "/rhome/tanuj/projects/roboclue-production-20261029/freeze06/dist/roboclue-0.1.0-py3-none-any.whl",
+  "wheel_sha256": "ab7894c4017d226e4297add0c0377b371ccac8843128929d8bb6bbe5e00e0263",
+  "sdist": {
+    "roboclue-0.1.0.tar.gz": "ac7a80a2abf093f20ce16f59de3363f995eb5bc637b925424d133769b85ee5c3"
+  },
+  "package_files": 170,
+  "installation": {
+    "full": {
+      "python": "/tmp/roboclue-freeze06-15hvgh0c/full/bin/python",
+      "binary": "/tmp/roboclue-freeze06-15hvgh0c/full/bin/roboclue",
+      "site": "/tmp/roboclue-freeze06-15hvgh0c/full/lib/python3.12/site-packages",
+      "version": "0.1.0",
+      "origin": "/tmp/roboclue-freeze06-15hvgh0c/full/lib/python3.12/site-packages/roboclue/__init__.py",
+      "payload_count": 170,
+      "payload_equal": true,
+      "no_extra_package_files": true,
+      "dependencies_sha256": "3bef6d25c57aa1c2ef787b7762b387cd4dee67165cbf25c3f2cdd4ad2394a6ad"
+    },
+    "core": {
+      "python": "/tmp/roboclue-freeze06-15hvgh0c/core/bin/python",
+      "binary": "/tmp/roboclue-freeze06-15hvgh0c/core/bin/roboclue",
+      "site": "/tmp/roboclue-freeze06-15hvgh0c/core/lib/python3.12/site-packages",
+      "version": "0.1.0",
+      "origin": "/tmp/roboclue-freeze06-15hvgh0c/core/lib/python3.12/site-packages/roboclue/__init__.py",
+      "payload_count": 170,
+      "payload_equal": true,
+      "no_extra_package_files": true,
+      "dependencies_sha256": "488c428348c4a43122566b87ba570a773884f56a89fe098f9a7851476c4a7663"
+    }
+  },
+  "profiles": {
+    "current312-default": {
+      "job": "141583.caquelon",
+      "python": "3.12.15 (main, Oct 14 2026, 01:05:27) [Clang 23.1.3 ]",
+      "passed": 6407,
+      "skipped": 63,
+      "testcases": 6470,
+      "junit_suite_tests_attribute": 6491,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 773.9,
+      "summary": "================= 6407 passed, 63 skipped in 772.47s (0:12:52) =================",
+      "result_sha256": "43b31e943fd4f2c966ba815539188629e1a895c0aa5696a27db7a2301f03e012",
+      "junit_sha256": "d2e72957bfa672dcc63f2146c6d1dc04b04dc62f88f280da105847d057c11a9a"
+    },
+    "current312-short": {
+      "job": "141584.caquelon",
+      "python": "3.12.15 (main, Oct 14 2026, 01:05:27) [Clang 23.1.3 ]",
+      "passed": 6407,
+      "skipped": 63,
+      "testcases": 6470,
+      "junit_suite_tests_attribute": 6491,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 775.8,
+      "summary": "================= 6407 passed, 63 skipped in 774.42s (0:12:54) =================",
+      "result_sha256": "83ddc36e7ce38d8bd75b751f9bb605504ee6b7cccb97fc780c769b834023e829",
+      "junit_sha256": "5e874ddc4e0d09c864be9d682b3c86ca5483e7a872c5bd04cb91c9a7bbbd8653"
+    },
+    "current312-long": {
+      "job": "141585.caquelon",
+      "python": "3.12.15 (main, Oct 14 2026, 01:05:27) [Clang 23.1.3 ]",
+      "passed": 6407,
+      "skipped": 63,
+      "testcases": 6470,
+      "junit_suite_tests_attribute": 6491,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 771.0,
+      "summary": "================= 6407 passed, 63 skipped in 769.46s (0:12:49) =================",
+      "result_sha256": "6b270a05096de75d30574524157409dd05819c04f4ac4c1fa53b6ba7132e26b8",
+      "junit_sha256": "d21f40e2bed4b9d00aeb6f89b855f4b1ea0628b670c47dd5646d24773c27a937"
+    },
+    "min311-default": {
+      "job": "141586.caquelon",
+      "python": "3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]",
+      "passed": 6407,
+      "skipped": 63,
+      "testcases": 6470,
+      "junit_suite_tests_attribute": 6470,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 699.6,
+      "summary": "=========== 6407 passed, 63 skipped, 1 warning in 696.96s (0:11:36) ============",
+      "result_sha256": "48aa73ecdb076113ec1bfee8ca31bd8e71bd88fdaea1d55c96328602124156e1",
+      "junit_sha256": "364cd39189deafc91fbefade26e8520a0a74f5d9d79241a2c9b3599eb830aeae"
+    },
+    "min311-short": {
+      "job": "141587.caquelon",
+      "python": "3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]",
+      "passed": 6407,
+      "skipped": 63,
+      "testcases": 6470,
+      "junit_suite_tests_attribute": 6470,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 698.5,
+      "summary": "=========== 6407 passed, 63 skipped, 1 warning in 697.36s (0:11:37) ============",
+      "result_sha256": "7b0251d681014ab125b28f808250a11a2e088399eabe4e27d652a5da4497e12a",
+      "junit_sha256": "2fb59637df48c92b6116d3db3418de328d955e99cc05f043156cb7f7744f14b4"
+    },
+    "min311-long": {
+      "job": "141588.caquelon",
+      "python": "3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]",
+      "passed": 6407,
+      "skipped": 63,
+      "testcases": 6470,
+      "junit_suite_tests_attribute": 6470,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 702.2,
+      "summary": "=========== 6407 passed, 63 skipped, 1 warning in 701.03s (0:11:41) ============",
+      "result_sha256": "7c1cbf022902dc37713c30712ec352f2fbdaa727f5fcbac8c9fc84f40eed75d2",
+      "junit_sha256": "512c7f20398cc2e978e31afa5b9107a3ee33970d2418b77fb2afbf9c508d27ba"
+    }
+  },
+  "public_regression": {
+    "job": "141555.caquelon",
+    "cells": 84,
+    "byte_identical": 60,
+    "differences": [
+      {
+        "dataset": "aloha_sim_insertion_human",
+        "mode": "local_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "aloha_sim_insertion_human",
+        "mode": "hub_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "aloha_sim_transfer_cube_human",
+        "mode": "local_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "aloha_sim_transfer_cube_human",
+        "mode": "hub_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "aloha_static_ziploc_slide",
+        "mode": "local_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "aloha_static_ziploc_slide",
+        "mode": "hub_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "columbia_cairlab_pusht_real",
+        "mode": "local_json",
+        "exits": [
+          1,
+          1
+        ]
+      },
+      {
+        "dataset": "columbia_cairlab_pusht_real",
+        "mode": "hub_json",
+        "exits": [
+          1,
+          1
+        ]
+      },
+      {
+        "dataset": "koch_pick_place_1_lego",
+        "mode": "local_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "koch_pick_place_1_lego",
+        "mode": "hub_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "pusht",
+        "mode": "local_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "pusht",
+        "mode": "hub_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "pusht_image",
+        "mode": "local_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "pusht_image",
+        "mode": "hub_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "pusht_keypoints",
+        "mode": "local_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "pusht_keypoints",
+        "mode": "hub_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "svla_so100_pickplace",
+        "mode": "local_json",
+        "exits": [
+          1,
+          1
+        ]
+      },
+      {
+        "dataset": "svla_so100_pickplace",
+        "mode": "hub_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "svla_so101_pickplace",
+        "mode": "local_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "svla_so101_pickplace",
+        "mode": "hub_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "utokyo_xarm_pick_and_place",
+        "mode": "local_json",
+        "exits": [
+          1,
+          1
+        ]
+      },
+      {
+        "dataset": "utokyo_xarm_pick_and_place",
+        "mode": "hub_json",
+        "exits": [
+          1,
+          1
+        ]
+      },
+      {
+        "dataset": "xarm_lift_medium",
+        "mode": "local_json",
+        "exits": [
+          3,
+          3
+        ]
+      },
+      {
+        "dataset": "xarm_lift_medium",
+        "mode": "hub_json",
+        "exits": [
+          3,
+          3
+        ]
+      }
+    ],
+    "version_provenance_only_cells": 24,
+    "equivalent_diagnostic_cells": 84,
+    "classification_sha256": "e0c4efdf1f6f063d685ebc3542eccf479a3a80be1a26038ffd5ff4337cf55a82",
+    "counting_scope": "12 pinned datasets x7 modes;84 regression cells, not84 datasets.",
+    "baseline_wheel_sha256": "ebf5cddec4d935618baf85f544ee7101ecd2feb64ff8756557b21db9328eb28c"
+  },
+  "installed_smoke": {
+    "job": "141574.caquelon",
+    "cli": [
+      {
+        "name": "version",
+        "exit": 0,
+        "stdout_sha256": "441964fd00cd1b706dcf4f9f38f158498d73d4dcbe7d54f0aed3bcfe82a2250b"
+      },
+      {
+        "name": "help",
+        "exit": 0,
+        "stdout_sha256": "a60db8882971d5e18e9200f0009536db41a4164aef26eaf60627d08d36a39083"
+      },
+      {
+        "name": "advanced-help",
+        "exit": 0,
+        "stdout_sha256": "9a3024586f7bfb574b9ac03d116187061e5e72089b443c0a70bf5876796428ca"
+      },
+      {
+        "name": "offline-demo",
+        "exit": 0,
+        "stdout_sha256": "ec0ee90b6143295646b897e36cdf967e8bf52f0ce012b257d28767edb755accf"
+      },
+      {
+        "name": "native-replay",
+        "exit": 0,
+        "stdout_sha256": "8ee419fe0266eb25e8fffe0cbf3c47d0f9c16ffb5e81b44dc56236770a80eb74"
+      },
+      {
+        "name": "mcp-setup",
+        "exit": 0,
+        "stdout_sha256": "d6155e60c2ad688ebeea25f4eb625399e22a97c91e2a37b6eebd2baafd34ec5e"
+      },
+      {
+        "name": "disconnect mcp serve --root",
+        "exit": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "disconnect mcp serve --advanced",
+        "exit": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "default_mcp_tools": 8,
+    "installed_interpreter": "/tmp/roboclue-freeze06-15hvgh0c/full/bin/python",
+    "scope": "Fresh installed CLI/default MCP and CPU saved-capture replay; no new optimizer execution"
+  },
+  "reviews": {
+    "content": {
+      "job": "141568.caquelon",
+      "status": "PASS_EXACT_FINAL_CONTENT_REPLAY",
+      "result_sha256": "63e61155f564168ff488fd8b60a149fd0c1204ee770f4a4f4530ba3954ff66c9",
+      "script": "/rhome/tanuj/projects/roboclue-production-20261029/catalogue-readiness/scripts/replay_final03.py",
+      "script_sha256": "d0184af1f9a6e538c34d1e10078e1280594dd0e527b7ff51a07fec646ebc002f",
+      "entries": 12,
+      "actual_cli_and_default_stdio_cases": 123,
+      "mutants_killed": 58,
+      "valid_mutants": 58,
+      "malformed_frontdoor_fields": 280,
+      "mixed_independent_error_and_recipe_warning_preserved": true
+    },
+    "claims": {
+      "job": "141569.caquelon",
+      "status": "PASS_FINAL_CONTENT_MALFORMED_VALUES_AND_README_CLAIMS",
+      "result_sha256": "16b668217261c89885ef9cee9c215ec633d3284354a3b8e6b2b97914f31b88c6",
+      "script": "/rhome/tanuj/projects/roboclue-production-20261029/catalogue-readiness/scripts/supplement_final03.py",
+      "script_sha256": "85da92639a2607c3c8b1b20a7d6323c518c15923d9aea21ffa70d4f4ccae25c1"
+    },
+    "structural": {
+      "job": "141570.caquelon",
+      "status": "PASS_INDEPENDENT_PRODUCTION_SUCCESSOR_FRAMING_AND_COVERAGE",
+      "result_sha256": "bce87beab39c7d0a54673fab842d780729184de3846db1d3fef7655afcc74edb",
+      "script": "/rhome/tanuj/projects/roboclue-production-20261029/structural-preflight-audit/scripts/retest05.py",
+      "script_sha256": "74611dfba756316423f61fb3cc99e134d6fd904dc7fcd57a2dc1148f05b0fb81",
+      "cases": 12,
+      "budget_controls": 4
+    },
+    "lock": {
+      "job": "141571.caquelon",
+      "runs": [
+        {
+          "name": "lock-review10",
+          "exit": 0
+        }
+      ],
+      "harness_sha256": {
+        "lock_review.py": "611832dcb754274a54a58ecd7be4e5c6cc6e18a3a963949907f7541203b1fc8d",
+        "lock_probe.py": "8311b94fe4f429e74cc603503efacc4e41c4c78facc67998c635fc10a46cdfcc"
+      },
+      "stageout_sha256": "5963816cef2b000095ae8fedf524e3cc7243f08139cee51819fbdc524bea531b"
+    },
+    "launcher-pipe": {
+      "job": "141572.caquelon",
+      "runs": [
+        {
+          "name": "launcher-review10",
+          "exit": 0
+        },
+        {
+          "name": "pipe-review10",
+          "exit": 0
+        }
+      ],
+      "harness_sha256": {
+        "launcher_review.py": "49cbb869fe4a0f4f464eb489ed4232333a979f0b08daafe4d33a3440e4a3b42c",
+        "pipe_review.py": "b335427c0428e9c5fdb841d948463f50a662c0bfdf86650936660b1a9450b122"
+      },
+      "stageout_sha256": "94aa91140e5ca72c4d34b4b4694ec75ff6bba109f2bba57023232f3f4cb5f283"
+    },
+    "core": {
+      "job": "141573.caquelon",
+      "runs": [
+        {
+          "name": "core-review10",
+          "exit": 0
+        }
+      ],
+      "harness_sha256": {
+        "core_review.py": "46c95f57260a84ffed434e5e1d145a1b946607707d0a63405d3309cd3dcf4517"
+      },
+      "stageout_sha256": "4fd03f348e302b32a622723812390b5783547e055b4a2440ea68f95d0f0fcbd5"
+    }
+  },
+  "native": {
+    "gr00t": {
+      "job": "141563.caquelon",
+      "status": "PASS_FRESH_INSTALLED_SUPPORTED_NATIVE_GR00T_WORKFLOW",
+      "result_sha256": "4ff6234f4170e4631e5048406cb61e3cdfb60dcc65066c69a61494f0a602f3ce",
+      "criterion_sha256": "758d5c621e178a3d5cfbda6995a02b1fbd35b00cf1e695d41815929e52b5f898",
+      "native_fault_optimizer_steps": 2,
+      "guarded_fault_optimizer_steps": 0,
+      "unknown_optimizer_steps": 0,
+      "corrected_healthy_replay_optimizer_steps_each": 2,
+      "healthy_corrected_replay_parameter_sha256": "483716c2bc262b79d8d3547180a3bbf8ea5dcf6e7d38074bb56609072b7e7fc7",
+      "scope": "Real public Qwen backbone plus native newly initialized GR00T N1.7 head and original Gr00tTrainer.train on public simulation data, six fresh-process startup controls. Not full-training CLI, continuous later-batch validation, trained-policy competence, physical behavior or practitioner trial."
+    },
+    "lerobot_act": {
+      "job": "141546.caquelon",
+      "status": "PASS_FRESH_INSTALLED_SUPPORTED_LEROBOT_ACT_AND_SEPARATE_GLOO_WORKFLOWS",
+      "result_sha256": "e58a096298a50d814d1c09f66642f3e69c5525c44a4f05dde067128296708770",
+      "criterion_sha256": "7e956c4c14917b6dcd5e9b73f4021138211623006a88d9dcac837451d08c3676",
+      "scope": "Original LeRobotDataset/ACT preprocess/ACT/update_policy with genuine Accelerator, deterministic public LIBERO cohort, twelve candidate phases including two workers. Separate two-rank CPU/Gloo custom optimizer loop. No full training CLI, continuous training, arbitrary augmentation/NCCL/FSDP, trained policy or physical/practitioner claim."
+    },
+    "openpi": {
+      "job": "141547.caquelon",
+      "status": "PASS_FRESH_INSTALLED_SUPPORTED_OPENPI_LOADER_AND_MODEL_PREHOOK_WORKFLOW",
+      "result_sha256": "0a88aff868b380ea07a499b48ba5d240edf140f79929efc8def622247a14a5f3",
+      "criterion_sha256": "4f00bc4c578ca478e01e5077d1efef895721d1cb2f7f46a6b0d03de1c673c5c4",
+      "scope": "Unmodified pinned OpenPI transforms/TorchDataLoader/Observation conversion and actual model-input hook with a controlled non-Pi0Torch consumer on public Parquet/video. No Pi0 forward/optimizer, JAX training, worker/DDP, physical or practitioner claim."
+    },
+    "transport": {
+      "job": "141567.caquelon",
+      "status": "PASS_REAL_NATIVE_RETAINED_BANK_INSTALLED_CLI_DEFAULT_MCP_AND_CI_CAPTURE_REPLAY",
+      "result_sha256": "5c035b0ac135f112a45245dece07299fbb08dcfb63f52628b143af10fee34e52",
+      "criterion_sha256": "758d5c621e178a3d5cfbda6995a02b1fbd35b00cf1e695d41815929e52b5f898",
+      "scope": "Actual fresh native07 GR00T captures against the unchanged original758d bank. Exact public07 installed CLI,console,generated default MCP configuration,strict CI,pin/read-root controls; no model is started by transport. All native03/capture outcomes remain bounded to documented profiles."
+    },
+    "gpu_reservation": {
+      "job": "141563.caquelon",
+      "node": "cvml07",
+      "state": "NATIVE_RUN_FINISHED",
+      "exit": 0,
+      "launch_gate_sha256": "c63932472a87371182ec209ef0b0a74e0f1efdb96765684fd0983b3f59131271",
+      "gpu_environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-98df1a50-6676-3686-3076-7adef395b150",
+        "NVIDIA_VISIBLE_DEVICES": null,
+        "PBS_GPUFILE": null
+      }
+    },
+    "gpu_inventory": "GPU-98df1a50-6676-3686-3076-7adef395b150, Quadro RTX 8000, 49152 MiB, 545.23.08"
+  },
+  "terminal_receipts": {
+    "act": {
+      "job": "141546.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "assets": {
+      "job": "141564.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "build": {
+      "job": "141531.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "claims": {
+      "job": "141569.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "content": {
+      "job": "141568.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "core": {
+      "job": "141573.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "gate": {
+      "job": "141566.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "inputs": {
+      "job": "141565.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "launcher-pipe": {
+      "job": "141572.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "lock": {
+      "job": "141571.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "matrix_current312-default": {
+      "job": "141583.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "matrix_current312-long": {
+      "job": "141585.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "matrix_current312-short": {
+      "job": "141584.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "matrix_min311-default": {
+      "job": "141586.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "matrix_min311-long": {
+      "job": "141588.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "matrix_min311-short": {
+      "job": "141587.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "openpi": {
+      "job": "141547.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "public": {
+      "job": "141555.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "public_diff_acceptance": {
+      "job": "141590.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "public_diff_inspection": {
+      "job": "141589.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "reservation": {
+      "job": "141563.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "smoke": {
+      "job": "141574.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "structural": {
+      "job": "141570.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    },
+    "transport": {
+      "job": "141567.caquelon",
+      "job_state": "F",
+      "Exit_status": "0",
+      "Stageout_status": "0",
+      "run_count": "1"
+    }
+  },
+  "collector_sha256": "894e002ac610ddac217d72ec4a816fc8330ec0cf4611ed85dc51f5774cabce9a"
+}

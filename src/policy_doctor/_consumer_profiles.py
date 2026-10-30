@@ -1,0 +1,40 @@
+"""Recorded native units/default profiles; no source is imported at runtime.
+
+0.6.1 wheel identity comes from PyPI; 0.6.2 identifies the recorded source build.
+Profile qualification covers native config defaults and normalization functions,
+not hardware execution or arbitrary installed builds sharing the same label.
+"""
+
+SOURCE_PROFILES = {'0.6.1': {'artifact': {'filename': 'lerobot-0.6.1-py3-none-any.whl',
+                        'kind': 'pypi_wheel',
+                        'sha256': '1894516040c65f80a45bd9741f8174aae90ed5d93da0627ab4f1a85fd8d75e90',
+                        'url': 'https://files.pythonhosted.org/packages/58/c0/8b17580cfae9d970edc1b9138a2231fb5416eb2e8e03e3c79f4355f978c2/lerobot-0.6.1-py3-none-any.whl'},
+           'files': {'motors/motors_bus.py': '6ce6109e32590ac2830f6995d13bb478b1a984695cc9ca59c0763ff091666393',
+                     'robots/bi_so_follower/bi_so_follower.py': '441f135a31616fb44233cd6b886dcdf79254d41c48757505b0bd3665fda45492',
+                     'robots/bi_so_follower/config_bi_so_follower.py': 'c7d7eea050dacbb205e56ccec6a3685260aa3e4b75966f714a2f52e48c64be29',
+                     'robots/koch_follower/config_koch_follower.py': 'cf0fee4174c7a52527bd54ac696c48989d3856cb27a48049d18eca6393b880b0',
+                     'robots/koch_follower/koch_follower.py': '938d4a7619fa85abd6c3507079bf657b07057ec9ea527878bf73c7a6496f66ef',
+                     'robots/lekiwi/config_lekiwi.py': 'f7ab8dc079efb47280253a115018ce00da13d1570d0e7e9ee7e9ba64e9fe74b2',
+                     'robots/lekiwi/lekiwi.py': '8fb7bbf11b6e0e354c8d32a4b1c1eb567bed27e799e8296867129228bddc6fd2',
+                     'robots/omx_follower/config_omx_follower.py': '784763a0ce77aa357983918c7b69490c8053ae4a6a0d559c81f186e71f15f9aa',
+                     'robots/omx_follower/omx_follower.py': 'a7842f5cbd70e3469a9d779dad3fcbeaf495b2947e167576faa4952d364ecdce',
+                     'robots/so_follower/config_so_follower.py': '65eecfc4eed9239abf65015e6b89cf0a1cb7d3bc34e5971eb83a034ac166d4f4',
+                     'robots/so_follower/so_follower.py': 'debe2661e7e44761a74f7cb6aaa83838a0771f91d86f80f42fa822ebb9cdd74b',
+                     'scripts/lerobot_record.py': 'ea53ad1dca8a3c60e3aa2e15993466c4a59c6c9f2197fceadaf034e3ee0c128c',
+                     'scripts/lerobot_rollout.py': '40a01fbd77b651e13b4adc6a4a3ef7c89e1a37b3a928adbd60b5363627ddb075'},
+           'source_revision': None},
+ '0.6.2': {'artifact': None,
+           'files': {'motors/motors_bus.py': 'aff8f6303845f897841392c59d1c411390336c05675c4f10139a4de13c2b0d6b',
+                     'robots/bi_so_follower/bi_so_follower.py': 'd2cb4318ad76aff30d86898ed160e09de4009f345e9e87bb3ad48210bcc3b579',
+                     'robots/bi_so_follower/config_bi_so_follower.py': 'c7d7eea050dacbb205e56ccec6a3685260aa3e4b75966f714a2f52e48c64be29',
+                     'robots/koch_follower/config_koch_follower.py': 'cf0fee4174c7a52527bd54ac696c48989d3856cb27a48049d18eca6393b880b0',
+                     'robots/koch_follower/koch_follower.py': '9ca01b5ac261625f1200bf62a35bccb10bd67125d98088eb708ae05694401614',
+                     'robots/lekiwi/config_lekiwi.py': '1c6b3ac708d15b616de85366e6a6ba9596cbe9f3fbfea4f09557d0ff4062dcec',
+                     'robots/lekiwi/lekiwi.py': 'c59b144c935a24fb85342bc2e50fad8ca1ad6c3fc184a87287b1018c43824063',
+                     'robots/omx_follower/config_omx_follower.py': '784763a0ce77aa357983918c7b69490c8053ae4a6a0d559c81f186e71f15f9aa',
+                     'robots/omx_follower/omx_follower.py': '40bf7e6b6fee30425beb34d97f1bc3aebbc6749b948784d2095e49e0f0ec9426',
+                     'robots/so_follower/config_so_follower.py': '65eecfc4eed9239abf65015e6b89cf0a1cb7d3bc34e5971eb83a034ac166d4f4',
+                     'robots/so_follower/so_follower.py': 'b31d7d2a45ce871466d11b4dfde893e594e1ab9d540f2c8efe06d0f591384caf',
+                     'scripts/lerobot_record.py': '3f9469cbf219e33ae49ed18141e3bd5ffb44fe8127e1cc93819e3871a0d2ede8',
+                     'scripts/lerobot_rollout.py': 'c6f0ea75716afdefffb886fbab8080339ede058586094f9ca05de0626bf5e6ac'},
+           'source_revision': '146d8474932c8b566717eb2738ba459337ab71c4'}}

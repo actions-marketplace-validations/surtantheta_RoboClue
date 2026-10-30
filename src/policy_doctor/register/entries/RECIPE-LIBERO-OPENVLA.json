@@ -1,0 +1,69 @@
+{
+  "applies_when": [
+    {
+      "checkpoint_id_in": [
+        "openvla/openvla-7b-finetuned-libero-spatial"
+      ]
+    }
+  ],
+  "claim_basis": "release_metadata",
+  "evidence": [
+    {
+      "basis": "publisher_recipe",
+      "quote": "--center_crop True",
+      "source": {
+        "line": 586,
+        "path": "README.md",
+        "repo": "openvla/openvla",
+        "sha": "c8f03f48af692657d3060c19588038c7220e9af9"
+      },
+      "url": "https://github.com/openvla/openvla/blob/c8f03f48af692657d3060c19588038c7220e9af9/README.md#L586"
+    },
+    {
+      "basis": "publisher_recipe",
+      "quote": "openvla/openvla-7b-finetuned-libero-spatial",
+      "source": {
+        "line": 546,
+        "path": "README.md",
+        "repo": "openvla/openvla",
+        "sha": "c8f03f48af692657d3060c19588038c7220e9af9"
+      },
+      "url": "https://github.com/openvla/openvla/blob/c8f03f48af692657d3060c19588038c7220e9af9/README.md#L546"
+    }
+  ],
+  "first_fix": "Set center_crop to True to reproduce this exact published setup.",
+  "healthy_controls": [
+    "The declared checkpoint with exact typed center_crop=True: consistent",
+    "An explicitly complete unrelated selected stack: not applicable; aggregate remains unassessed"
+  ],
+  "id": "RECIPE-LIBERO-OPENVLA",
+  "kind": "recipe",
+  "last_verified": "2026-10-29",
+  "recipe_field": {
+    "checkpoint": "openvla/openvla-7b-finetuned-libero-spatial",
+    "field": "center_crop",
+    "published_value": true,
+    "source_index": 0,
+    "status": "published"
+  },
+  "schema_version": 1,
+  "severity": "WARNING",
+  "stacks": [
+    "openvla"
+  ],
+  "title": "Compare the explicit typed evaluation configuration with the pinned publisher recipe",
+  "unknown_when": "Supply an explicitly declared openvla/openvla-7b-finetuned-libero-spatial checkpoint identity, the complete selected stack list, and the actual resolved evaluation configuration containing typed center_crop. Absent flags do not establish a runtime value; raw launch text is not parsed into this field. An unrecognized alias, missing field or missing config remains UNKNOWN. This single-field comparison does not attest execution, framework/simulator compatibility, historical training configuration or scores. Other unpublished fields remain unassessed.",
+  "validation": {
+    "record": "docs/REGISTER_PRODUCTION_ACCEPTANCE.md#recipe-libero-openvla",
+    "status": "confirmed"
+  },
+  "violation_when": [
+    {
+      "config_key": {
+        "op": "ne",
+        "path": "center_crop",
+        "value": true
+      }
+    }
+  ]
+}

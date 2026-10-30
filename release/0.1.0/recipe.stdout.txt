@@ -1,0 +1,6 @@
+RoboClue provenance register: WARNING.
+n_action_steps = 20 differs from the published evaluation recipe for lerobot/fastwam_libero_uncond_2cam224 (10, fastwam.mdx:163). Results are not comparable to the published numbers.
+Evidence: config.json#n_action_steps=20.
+Source: fastwam.mdx:163; full pinned citation in structured evidence.
+Next: set n_action_steps to 10 to reproduce the published setup
+Scope: Curated register predicates on selected local evidence only. Package metadata and lockfiles declare versions; they do not authenticate installed source or establish task performance.

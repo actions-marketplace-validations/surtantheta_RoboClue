@@ -1,0 +1,434 @@
+{
+  "source": {
+    "repo_id": "lerobot/aloha_sim_transfer_cube_scripted",
+    "revision": "3ff40d3",
+    "upstream_issue": "https://github.com/huggingface/lerobot/issues/2283"
+  },
+  "projection": "All 20,000 source identity triples verified as index=i, episode_index=i//400, frame_index=i%400; full metadata identity/span/pointer projection. No images or action values retained.",
+  "episode_length": 400,
+  "data_shards": [
+    {
+      "path": "data/chunk-000/file-000.parquet",
+      "start": 0,
+      "rows": 7200,
+      "sha256": "801338dc3c18dd7874d2d2eb8ab1383e757653815be79be2759c35aa20eaa59a"
+    },
+    {
+      "path": "data/chunk-000/file-001.parquet",
+      "start": 7200,
+      "rows": 7200,
+      "sha256": "d280779cd4f72aa8fcb8ec42dd9c272d8854a43715a4363cb267e8f21cf050bf"
+    },
+    {
+      "path": "data/chunk-000/file-002.parquet",
+      "start": 14400,
+      "rows": 5600,
+      "sha256": "90024478446994bc90826d6b173104e2d9a7c135573a833a246c54d694e577d3"
+    }
+  ],
+  "metadata": [
+    {
+      "episode_index": 0,
+      "length": 400,
+      "dataset_from_index": 0,
+      "dataset_to_index": 400,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 1,
+      "length": 400,
+      "dataset_from_index": 400,
+      "dataset_to_index": 800,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 2,
+      "length": 400,
+      "dataset_from_index": 800,
+      "dataset_to_index": 1200,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 3,
+      "length": 400,
+      "dataset_from_index": 1200,
+      "dataset_to_index": 1600,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 4,
+      "length": 400,
+      "dataset_from_index": 1600,
+      "dataset_to_index": 2000,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 5,
+      "length": 400,
+      "dataset_from_index": 2000,
+      "dataset_to_index": 2400,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 6,
+      "length": 400,
+      "dataset_from_index": 2400,
+      "dataset_to_index": 2800,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 7,
+      "length": 400,
+      "dataset_from_index": 2800,
+      "dataset_to_index": 3200,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 8,
+      "length": 400,
+      "dataset_from_index": 3200,
+      "dataset_to_index": 3600,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 9,
+      "length": 400,
+      "dataset_from_index": 3600,
+      "dataset_to_index": 4000,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 10,
+      "length": 400,
+      "dataset_from_index": 4000,
+      "dataset_to_index": 4400,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 11,
+      "length": 400,
+      "dataset_from_index": 4400,
+      "dataset_to_index": 4800,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 12,
+      "length": 400,
+      "dataset_from_index": 4800,
+      "dataset_to_index": 5200,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 13,
+      "length": 400,
+      "dataset_from_index": 5200,
+      "dataset_to_index": 5600,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 14,
+      "length": 400,
+      "dataset_from_index": 5600,
+      "dataset_to_index": 6000,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 15,
+      "length": 400,
+      "dataset_from_index": 6000,
+      "dataset_to_index": 6400,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 16,
+      "length": 400,
+      "dataset_from_index": 6400,
+      "dataset_to_index": 6800,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 17,
+      "length": 400,
+      "dataset_from_index": 6800,
+      "dataset_to_index": 7200,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 18,
+      "length": 400,
+      "dataset_from_index": 7200,
+      "dataset_to_index": 7600,
+      "data/chunk_index": 0,
+      "data/file_index": 0
+    },
+    {
+      "episode_index": 19,
+      "length": 400,
+      "dataset_from_index": 400,
+      "dataset_to_index": 800,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 20,
+      "length": 400,
+      "dataset_from_index": 800,
+      "dataset_to_index": 1200,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 21,
+      "length": 400,
+      "dataset_from_index": 1200,
+      "dataset_to_index": 1600,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 22,
+      "length": 400,
+      "dataset_from_index": 1600,
+      "dataset_to_index": 2000,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 23,
+      "length": 400,
+      "dataset_from_index": 2000,
+      "dataset_to_index": 2400,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 24,
+      "length": 400,
+      "dataset_from_index": 2400,
+      "dataset_to_index": 2800,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 25,
+      "length": 400,
+      "dataset_from_index": 2800,
+      "dataset_to_index": 3200,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 26,
+      "length": 400,
+      "dataset_from_index": 3200,
+      "dataset_to_index": 3600,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 27,
+      "length": 400,
+      "dataset_from_index": 3600,
+      "dataset_to_index": 4000,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 28,
+      "length": 400,
+      "dataset_from_index": 4000,
+      "dataset_to_index": 4400,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 29,
+      "length": 400,
+      "dataset_from_index": 4400,
+      "dataset_to_index": 4800,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 30,
+      "length": 400,
+      "dataset_from_index": 4800,
+      "dataset_to_index": 5200,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 31,
+      "length": 400,
+      "dataset_from_index": 5200,
+      "dataset_to_index": 5600,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 32,
+      "length": 400,
+      "dataset_from_index": 5600,
+      "dataset_to_index": 6000,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 33,
+      "length": 400,
+      "dataset_from_index": 6000,
+      "dataset_to_index": 6400,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 34,
+      "length": 400,
+      "dataset_from_index": 6400,
+      "dataset_to_index": 6800,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 35,
+      "length": 400,
+      "dataset_from_index": 6800,
+      "dataset_to_index": 7200,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 36,
+      "length": 400,
+      "dataset_from_index": 7200,
+      "dataset_to_index": 7600,
+      "data/chunk_index": 0,
+      "data/file_index": 1
+    },
+    {
+      "episode_index": 37,
+      "length": 400,
+      "dataset_from_index": 400,
+      "dataset_to_index": 800,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 38,
+      "length": 400,
+      "dataset_from_index": 800,
+      "dataset_to_index": 1200,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 39,
+      "length": 400,
+      "dataset_from_index": 1200,
+      "dataset_to_index": 1600,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 40,
+      "length": 400,
+      "dataset_from_index": 1600,
+      "dataset_to_index": 2000,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 41,
+      "length": 400,
+      "dataset_from_index": 2000,
+      "dataset_to_index": 2400,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 42,
+      "length": 400,
+      "dataset_from_index": 2400,
+      "dataset_to_index": 2800,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 43,
+      "length": 400,
+      "dataset_from_index": 2800,
+      "dataset_to_index": 3200,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 44,
+      "length": 400,
+      "dataset_from_index": 3200,
+      "dataset_to_index": 3600,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 45,
+      "length": 400,
+      "dataset_from_index": 3600,
+      "dataset_to_index": 4000,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 46,
+      "length": 400,
+      "dataset_from_index": 4000,
+      "dataset_to_index": 4400,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 47,
+      "length": 400,
+      "dataset_from_index": 4400,
+      "dataset_to_index": 4800,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 48,
+      "length": 400,
+      "dataset_from_index": 4800,
+      "dataset_to_index": 5200,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    },
+    {
+      "episode_index": 49,
+      "length": 400,
+      "dataset_from_index": 5200,
+      "dataset_to_index": 5600,
+      "data/chunk_index": 0,
+      "data/file_index": 2
+    }
+  ],
+  "metadata_sha256": {
+    "meta/episodes/chunk-000/file-000.parquet": "06744fc444bea4993e306938671d523cebe86140bc8d781a248af13fb39bd5f2"
+  }
+}

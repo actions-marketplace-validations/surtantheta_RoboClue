@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roboclue"
+version = "0.1.0"
+description = "Robot-learning pipeline checks and correction evidence for CLI, Python and MCP"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT AND Apache-2.0 AND BSD-3-Clause AND CC-BY-4.0"
+license-files = ["LICENSE", "LICENSE-APACHE-2.0", "LICENSE-ISAACLAB-BSD-3-CLAUSE", "THIRD_PARTY_NOTICES.md", "src/policy_doctor/data/native_training_demo/LICENSE-CC-BY-4.0.txt", "src/policy_doctor/data/native_training_demo/NOTICE.txt"]
+dependencies = ["numpy>=1.24", "safetensors>=0.4", "packaging>=24"]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.28,<2"]
+dataset = ["pyarrow>=17", "h5py>=3.10", "PyYAML>=6.0.3,<7"]
+recovery = ["pyarrow>=17", "h5py>=3.10", "PyYAML>=6.0.3,<7", "av==15.1.0"]
+ros = ["PyYAML>=6.0.3,<7"]
+dev = ["pytest>=8", "ruff>=0.9", "mcp>=1.28,<2", "pyarrow>=17", "h5py>=3.10", "PyYAML>=6.0.3,<7"]
+
+[project.scripts]
+policy-doctor = "policy_doctor.cli:main"
+policy-doctor-mcp = "policy_doctor.server:main"
+roboclue-target-guard = "policy_doctor.training_guard_capture:main"
+roboclue = "policy_doctor.product_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+policy_doctor = ["source_manifest.json", "fastwam_profiles.json", "data/native_training_demo/*.json", "data/native_training_demo/*.txt", "register/schema-v1.json", "register/entries/*.json", "register/entries/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]

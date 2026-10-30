@@ -1,0 +1,20 @@
+.venv/
+.validation/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+reports/
+.codebase-memory/
+
+# Local credentials are never part of the project backup.
+.env
+.env.*
+!.env.example
+.netrc
+.git-credentials
+*.pem
+*.key

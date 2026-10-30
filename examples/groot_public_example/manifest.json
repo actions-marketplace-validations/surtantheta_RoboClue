@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "kind": "pinned_public_groot_example_preparation",
+  "description": "Original selected metadata/media and exact minimal native source closure. Download for local inspection; no weights or prepared diagnostic evidence.",
+  "sources": {
+    "harness_base": "41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84",
+    "harness_corrected": "aa352f52f14fc0f557f2b4b5f8d7134013a16298",
+    "groot": "e29d8fc50b0e4745120ae3fb72447986fe638aa6",
+    "checkpoint_repo": "0xAnkitSingh/GR00T-N1.6-LIBERO",
+    "checkpoint_revision": "d690a226ad06e81736786f56cf879d2ed1dd3f0f",
+    "dataset_repo": "IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot",
+    "dataset_revision": "bf14d6258218d12c2e3c1a3b9922e163cdf6455d"
+  },
+  "dataset_license": {
+    "declared_license": null,
+    "redistribution_qualified": false,
+    "reason": "Pinned dataset publication has no license/card grant. Downloads remain local; no redistribution permission inferred."
+  },
+  "downloads": [
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/LICENSE",
+      "size_bytes": 10751,
+      "sha256": "67bb161b5c65ba8be43632d7bd1bae71021a69fe61532a5f3ceb50050dc4fe54",
+      "destinations": [
+        "source/candidate/LICENSE",
+        "source/reference/LICENSE"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/README.md",
+      "size_bytes": 24656,
+      "sha256": "285d80f5278c0a7743f2bdb5e86f4c19e3cc2c669b45fd500f3ebe3e5239611c",
+      "destinations": [
+        "source/candidate/README.md",
+        "source/reference/README.md"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/pyproject.toml",
+      "size_bytes": 2495,
+      "sha256": "990678fd5db07f7263e401bf7b25b360305db811159bea8eacfed025701eac62",
+      "destinations": [
+        "source/candidate/pyproject.toml",
+        "source/reference/pyproject.toml"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/src/vla_eval/__init__.py",
+      "size_bytes": 534,
+      "sha256": "7e80aab62f58239628a2a0abd6f6a75cb9b6cbca6666d7188e4ea222855776ff",
+      "destinations": [
+        "source/candidate/src/vla_eval/__init__.py",
+        "source/reference/src/vla_eval/__init__.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/src/vla_eval/model_servers/__init__.py",
+      "size_bytes": 338,
+      "sha256": "0094a846b28df1dfe3559bac4f30f747e7d17287f6828b31577b7c7c61bcbb06",
+      "destinations": [
+        "source/candidate/src/vla_eval/model_servers/__init__.py",
+        "source/reference/src/vla_eval/model_servers/__init__.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/src/vla_eval/model_servers/base.py",
+      "size_bytes": 6333,
+      "sha256": "c32f89af26b3cc1abbee9af677a7583933784f0b442a6894c3da59c6a1436f9c",
+      "destinations": [
+        "source/candidate/src/vla_eval/model_servers/base.py",
+        "source/reference/src/vla_eval/model_servers/base.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/src/vla_eval/model_servers/chunking.py",
+      "size_bytes": 3009,
+      "sha256": "154f2e92a5cda3e8994705cb5565d51c3ef42a1cac1b5aee90c2d92f1746a710",
+      "destinations": [
+        "source/candidate/src/vla_eval/model_servers/chunking.py",
+        "source/reference/src/vla_eval/model_servers/chunking.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/src/vla_eval/model_servers/groot.py",
+      "size_bytes": 11057,
+      "sha256": "ac8e7f5c6913ca65eaec1cb32948049e6e0c6a5a5ad812c7e520080d7cfbfc91",
+      "destinations": [
+        "source/candidate/src/vla_eval/model_servers/groot.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/src/vla_eval/model_servers/predict.py",
+      "size_bytes": 23822,
+      "sha256": "f40273a9ddccc368d0c2105bc82ebdd4ceea8f3ac354bca27e005867d26bbf7b",
+      "destinations": [
+        "source/candidate/src/vla_eval/model_servers/predict.py",
+        "source/reference/src/vla_eval/model_servers/predict.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/src/vla_eval/rotation.py",
+      "size_bytes": 8807,
+      "sha256": "7d43d93dce824ed4c0d615b5314639082718cad6b27c8fc7d52c7334d40224a3",
+      "destinations": [
+        "source/candidate/src/vla_eval/rotation.py",
+        "source/reference/src/vla_eval/rotation.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/src/vla_eval/specs.py",
+      "size_bytes": 7847,
+      "sha256": "57a7704eb197e53b095a100841bc57b6a8f2fa76f2539f5e8e0b48bee12c75d4",
+      "destinations": [
+        "source/candidate/src/vla_eval/specs.py",
+        "source/reference/src/vla_eval/specs.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/allenai/vla-evaluation-harness/41bd8a44dbe5ba0f7902adb5b7c121c1c174dc84/src/vla_eval/types.py",
+      "size_bytes": 1990,
+      "sha256": "5f5759a7b1c078b89392a65311304bbad4c28522450af699c95c95cc8777670a",
+      "destinations": [
+        "source/candidate/src/vla_eval/types.py",
+        "source/reference/src/vla_eval/types.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/flyingfang/vla-evaluation-harness/aa352f52f14fc0f557f2b4b5f8d7134013a16298/src/vla_eval/model_servers/groot.py",
+      "size_bytes": 15150,
+      "sha256": "eb514860fd9cad38a7f842e5a32676a5fe08ac95926496e24f4fbb3a47a16b52",
+      "destinations": [
+        "source/reference/src/vla_eval/model_servers/groot.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/LICENSE",
+      "size_bytes": 4729,
+      "sha256": "564046abbef821cefd5c169d34ee1e96b3dfb72cf0be81de41ef8f4a1323c5a3",
+      "destinations": [
+        "source/groot/LICENSE"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destinations": [
+        "source/groot/gr00t/__init__.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/configs/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destinations": [
+        "source/groot/gr00t/configs/__init__.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/configs/data/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destinations": [
+        "source/groot/gr00t/configs/data/__init__.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/configs/data/embodiment_configs.py",
+      "size_bytes": 10853,
+      "sha256": "75ececc2baed9e6fe09e1266c5f4a8814f4240a951fe9fac3b8fb5d0aec6e29b",
+      "destinations": [
+        "source/groot/gr00t/configs/data/embodiment_configs.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/data/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destinations": [
+        "source/groot/gr00t/data/__init__.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/data/embodiment_tags.py",
+      "size_bytes": 1222,
+      "sha256": "d408d311490f693258d0d73f0ebf0c7b0ae0148fc2a379529a7a56dbfd857b6f",
+      "destinations": [
+        "source/groot/gr00t/data/embodiment_tags.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/data/state_action/action_chunking.py",
+      "size_bytes": 25024,
+      "sha256": "08b25a4e51fbd9712747c7ea1bbd130599cd3bc236713a71a24383ec9007655d",
+      "destinations": [
+        "source/groot/gr00t/data/state_action/action_chunking.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/data/state_action/pose.py",
+      "size_bytes": 22229,
+      "sha256": "aef98b628fcf99221af271f77b140f0076a932c245193703f8c7b9fc1196625a",
+      "destinations": [
+        "source/groot/gr00t/data/state_action/pose.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/data/state_action/state_action_processor.py",
+      "size_bytes": 28764,
+      "sha256": "4995bbfbd6a967f1a2ca5b963624396ed0ae1ca961994f25e73334380075ea2b",
+      "destinations": [
+        "source/groot/gr00t/data/state_action/state_action_processor.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/data/types.py",
+      "size_bytes": 3775,
+      "sha256": "931b28c79039349fc0f51eaaf13fab5b5595e364d14f60b53ed9ee0bc88bf555",
+      "destinations": [
+        "source/groot/gr00t/data/types.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/e29d8fc50b0e4745120ae3fb72447986fe638aa6/gr00t/data/utils.py",
+      "size_bytes": 11320,
+      "sha256": "da6b201f88d41d5e2d534c033f58fa35e5d75db57f429b91dd367944d99c824a",
+      "destinations": [
+        "source/groot/gr00t/data/utils.py"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/0xAnkitSingh/GR00T-N1.6-LIBERO/resolve/d690a226ad06e81736786f56cf879d2ed1dd3f0f/processor_config.json",
+      "size_bytes": 12079,
+      "sha256": "c258bc678c131451dba4c303c0d95818bc5b43e12844f8cfc639aa3e487790be",
+      "destinations": [
+        "checkpoint/processor_config.json"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/0xAnkitSingh/GR00T-N1.6-LIBERO/resolve/d690a226ad06e81736786f56cf879d2ed1dd3f0f/statistics.json",
+      "size_bytes": 268109,
+      "sha256": "5e8b610717512458091da996e3365d59e9c51d2e9699d368e74290643ee076de",
+      "destinations": [
+        "checkpoint/statistics.json"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/0xAnkitSingh/GR00T-N1.6-LIBERO/resolve/d690a226ad06e81736786f56cf879d2ed1dd3f0f/README.md",
+      "size_bytes": 2359,
+      "sha256": "dbd32fef4c3bb382870fb539c3744fd3871b47c396a12d70be39ffa704de9b48",
+      "destinations": [
+        "checkpoint/README.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot/resolve/bf14d6258218d12c2e3c1a3b9922e163cdf6455d/meta/episodes.jsonl",
+      "size_bytes": 53076,
+      "sha256": "690349688e96d984007bf2cca3ccf2683dfc809f03dab55e1159e4cc71f150b7",
+      "destinations": [
+        "dataset/meta/episodes.jsonl"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot/resolve/bf14d6258218d12c2e3c1a3b9922e163cdf6455d/meta/info.json",
+      "size_bytes": 3349,
+      "sha256": "8995d3b6f7b723137fe7273eba41e9356be8b3a9176ec11678c13c7215676c85",
+      "destinations": [
+        "dataset/meta/info.json"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot/resolve/bf14d6258218d12c2e3c1a3b9922e163cdf6455d/meta/tasks.jsonl",
+      "size_bytes": 1001,
+      "sha256": "399841cf8e861052d3fb7214ed619b5a10b4eded2d6f107e7fed338a233dd0e1",
+      "destinations": [
+        "dataset/meta/tasks.jsonl"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot/resolve/bf14d6258218d12c2e3c1a3b9922e163cdf6455d/data/chunk-000/episode_000000.parquet",
+      "size_bytes": 12708,
+      "sha256": "3f875604fad478765549128759edfb33a64b69b7b82decebc9e4f38155f20a8c",
+      "destinations": [
+        "dataset/data/chunk-000/episode_000000.parquet"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot/resolve/bf14d6258218d12c2e3c1a3b9922e163cdf6455d/videos/chunk-000/observation.images.image/episode_000000.mp4",
+      "size_bytes": 367769,
+      "sha256": "eba9a9b36611f7e1061f65233b3b0c53eaa3f9c347dfd073f7470a821695fdf7",
+      "destinations": [
+        "dataset/videos/chunk-000/observation.images.image/episode_000000.mp4"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot/resolve/bf14d6258218d12c2e3c1a3b9922e163cdf6455d/videos/chunk-000/observation.images.wrist_image/episode_000000.mp4",
+      "size_bytes": 358588,
+      "sha256": "cf4f97b9405e6e06d42f3816c902a7cec22ba0497dc4ea3fa201729302ba4168",
+      "destinations": [
+        "dataset/videos/chunk-000/observation.images.wrist_image/episode_000000.mp4"
+      ]
+    },
+    {
+      "url": "https://files.pythonhosted.org/packages/d7/da/b16945cb49f8852a5ac67073cee18bd65f6dec705ec044bdfec35b12b1d1/vla_eval-0.8.0-py3-none-any.whl",
+      "size_bytes": 537594,
+      "sha256": "5229750343580e138379e4842a49920cd6ae151e241da196818ec02d02eb2697",
+      "destinations": [
+        "downloads/vla_eval-0.8.0-py3-none-any.whl"
+      ]
+    }
+  ],
+  "wheel_members": [
+    {
+      "archive": "downloads/vla_eval-0.8.0-py3-none-any.whl",
+      "member": "vla_eval/_version.py",
+      "size_bytes": 520,
+      "sha256": "35c3daecff76b95596257490487a9796a33dee1a785ba633f1668f2cbe721bab",
+      "destinations": [
+        "source/candidate/src/vla_eval/_version.py",
+        "source/reference/src/vla_eval/_version.py"
+      ]
+    }
+  ],
+  "native_requirements": [
+    "numpy==2.2.6",
+    "scipy==1.15.3",
+    "anyio==4.15.1",
+    "pyarrow==26.0.0",
+    "av==15.1.0",
+    "idna==3.20",
+    "typing-extensions==4.16.0"
+  ]
+}

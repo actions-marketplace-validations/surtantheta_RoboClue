@@ -1,0 +1,27 @@
+{
+  "codebase_version": "v3.0",
+  "robot_type": "synthetic_arm",
+  "fps": 30,
+  "features": {
+    "observation.state": {
+      "type": "STATE",
+      "shape": [
+        2
+      ],
+      "names": [
+        "shoulder",
+        "gripper"
+      ]
+    },
+    "action": {
+      "type": "ACTION",
+      "shape": [
+        2
+      ],
+      "names": [
+        "shoulder",
+        "gripper"
+      ]
+    }
+  }
+}

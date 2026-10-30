@@ -1,0 +1,16 @@
+{
+  "status": "PASS_PUBLIC_REGRESSION_VERSION_PROVENANCE_ONLY",
+  "source_commit": "d8ce313ed63c0140d458c0ee34e27d8f83fe16dd",
+  "wheel_sha256": "ab7894c4017d226e4297add0c0377b371ccac8843128929d8bb6bbe5e00e0263",
+  "raw_identical": 60,
+  "advertised_version_and_derived_card_id_only": 24,
+  "unexplained_differences": 0,
+  "diagnoses_lost": 0,
+  "all_diagnostic_and_status_data_equal": true,
+  "datasets": 12,
+  "modes": 7,
+  "regression_cells": 84,
+  "original_full_receipt_sha256": "e0c4efdf1f6f063d685ebc3542eccf479a3a80be1a26038ffd5ff4337cf55a82",
+  "scope": "Public summary of the retained full regression classification; raw original evidence remains unchanged locally.",
+  "method": "Verify raw hashes; permit only engine-version and card-ID leaf changes; independently recompute both card IDs from canonical finite JSON, reverse only the version and recompute its ID, then require complete dictionary equality."
+}

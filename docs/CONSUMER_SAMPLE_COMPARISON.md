@@ -1,0 +1,64 @@
+# Compare selected numeric samples after a pipeline change
+
+This route compares supported saved artifacts. Its scope differs from the live native training guards; see [evidence](EVIDENCE.md).
+
+Use ordinary dataset and saved-processor folders to answer: **did the selected numeric values change, and where did the computed difference first appear?** A saved file change can leave the numeric result equal. Conversely, a consumer setting can change the result even when the dataset is unchanged.
+
+The supported route is the pinned GR00T N1.7 G1 post-training profile with 43 state coordinates, 35 consumed action coordinates and a 50-step action window. It reads local LeRobot v2.1 metadata and selected Parquet rows, plus `processor_config.json`, `statistics.json` and optional `embodiment_id.json`. It does not load model weights or execute supplied processor code.
+
+Install the dataset extra in the checkout: `python -m pip install '.[dataset]'`. For MCP, use `'.[dataset,mcp]'`.
+
+## One comparison
+
+```sh
+roboclue advanced preflight /datasets/candidate \
+  --checkpoint /checkpoints/candidate \
+  --consumer-reference-dataset /datasets/reference \
+  --consumer-reference-checkpoint /checkpoints/reference
+```
+
+Omit the reference dataset to apply both saved processors to the same current dataset. This is useful when checking a changed consumer setting. It does not establish that either processor historically trained on those rows.
+
+Without explicit selectors, the checker chooses up to nine complete windows: the first, one-third and last eligible observed episode positions, with the first, middle and last complete 50-step anchors. Repeated positions/anchors are removed. Stored episode IDs may be gapped; declared episode counts are checked separately. This is a bounded deterministic sample, not a representative quality estimate.
+
+To select a particular window, add `--consumer-sample 72:52`. Here `72` is the stored episode ID and `52` is the physical row within that episode's Parquet file. Repeat up to nine times. CLI selection requires complete windows. Python/MCP can explicitly request clamped controls with `allow_padding: true`.
+
+The consumer component reports:
+
+- `artifact_identity_changed`: whether saved processor bytes changed;
+- `active_interpretation_changed`: whether supported active processing changed;
+- `numeric_projection_value_effect`: `CHANGED`, `EQUAL` or `UNKNOWN` for the selected supported numeric values;
+- the first computed stage divergence, the first value divergence, and the first final changed value, with separate coordinates;
+- each side's source row, declared column/slice and file hashes.
+
+The intermediate and final first differences can occur at different coordinates. Their source mappings remain separate. Physical joint identity and historical sample association cannot be inferred from column names.
+
+## Require a regression invariant
+
+Add `--consumer-require-equal` when selected numeric equality is the intended invariant. A proven changed selected value then produces an ERROR. Without this flag, a legitimate processing change is an observation and can have consumer-component PASS/CHANGED.
+
+Other preflight components retain their own findings. For example, a valid native saved-processor folder does not supply a LeRobot `config.json`; the separate LeRobot policy-interface assessment stays UNKNOWN. The overall command can therefore return UNKNOWN/exit3 while the supported consumer comparison passes. ERROR returns exit1. Invalid requests return exit2.
+
+Save the complete current report with `--json --output comparison.json`; the destination must be new. That report contains the observed evidence. A generated saved consumer-reference/recheck lifecycle is a later milestone; this command does not yet restore a comparison from the saved report.
+
+## MCP
+
+Start the server with read roots containing all four input folders. Call the existing `preflight_check` tool:
+
+```json
+{
+  "source": "/datasets/candidate",
+  "checkpoint": "/checkpoints/candidate",
+  "consumer_reference_dataset": "/datasets/reference",
+  "consumer_reference_checkpoint": "/checkpoints/reference",
+  "consumer_require_equal": true
+}
+```
+
+The default concise response retains the numeric effect, identity/active-processing distinction, error or unresolved cause, and first source witnesses. Text previews are bounded by serialized JSON size; truncated paths or columns are marked and retain full-value digests. The top-level full-report digest identifies the complete current report. A later detailed request rereads inputs.
+
+## Evidence and limits
+
+The frozen source comparison has matched actual retained native outputs in both dependency environments: 39 selections, 63 numeric applications, three boundary refusals and ten four-folder cases. Healthy equality, changed exports, changed relative processing, inactive-statistic identity changes and explicit padding controls are covered. Checkpoint triplets in that proof were generated by the pinned native writer method with declared state; they are not historical training checkpoints.
+
+The reported stages are checker-computed supported arithmetic. Full native processor construction, wrapper padding/masks, Torch casts, images/language, the complete model target, original recording association, physical timing and policy success remain UNKNOWN. Native GR00T helpers can inspect and process the same samples; this route brings the artifact selection, comparison and source evidence into the existing CLI/Python/MCP workflow. Human time saved and community adoption remain unmeasured.

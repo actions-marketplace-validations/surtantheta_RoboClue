@@ -1,0 +1,35 @@
+{
+  "steps": [
+    {
+      "registry_name": "unnormalizer_processor",
+      "config": {
+        "features": {
+          "observation.state": {
+            "type": "STATE",
+            "shape": [
+              2
+            ]
+          },
+          "action": {
+            "type": "ACTION",
+            "shape": [
+              2
+            ]
+          }
+        },
+        "norm_map": {
+          "STATE": "MEAN_STD",
+          "ACTION": "MEAN_STD"
+        },
+        "eps": 1e-08
+      },
+      "state_file": "post.safetensors"
+    },
+    {
+      "registry_name": "absolute_actions_processor",
+      "config": {
+        "enabled": true
+      }
+    }
+  ]
+}

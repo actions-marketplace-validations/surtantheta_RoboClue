@@ -1,0 +1,82 @@
+{
+  "upstream_repository": "https://github.com/isaac-sim/IsaacLab-Arena",
+  "revision": "8b4a3a47fc53de23e8205089d71109a2e2348acd",
+  "purpose": "Exact source/config fingerprint fixtures. Generated tests compile only the hash-pinned extract_teleop_command helper and three selected AST assignment fragments as native-formula oracles; never the full native module/config/converter/Torch/consumer. Numeric arrays are generated. Product-supplied converter code is never executed.",
+  "modifications": "None to ten retained upstream files; original headers retained.",
+  "copyright": "The Isaac Lab Arena Project Developers; exact individual notices retained.",
+  "source_license_evidence": "Eight retained source/config files carry explicit Apache-2.0 headers. modality.json has no inline header. Root LICENSE request at this revision returned404 in preserved acquisition; no repository-root LICENSE/NOTICE is invented.",
+  "license_copy_origin": "Unmodified standard Apache2.0 text from this project LICENSE-APACHE-2.0; MarkItDown conversion inspected before use. This is not represented as fetched Arena root LICENSE.",
+  "files": {
+    "isaaclab_arena_gr00t/lerobot/convert_hdf5_to_lerobot.py": {
+      "sha256": "0c837c3176a4ab0ed32fa71081daabc04e1c777963d65b828e3599a1b80ac8dc",
+      "size_bytes": 23132,
+      "upstream_url": "https://github.com/isaac-sim/IsaacLab-Arena/blob/8b4a3a47fc53de23e8205089d71109a2e2348acd/isaaclab_arena_gr00t/lerobot/convert_hdf5_to_lerobot.py",
+      "inline_license": "SPDX-License-Identifier: Apache-2.0",
+      "fixture_path": "isaaclab_arena_gr00t/lerobot/convert_hdf5_to_lerobot.py.txt"
+    },
+    "isaaclab_arena_gr00t/lerobot/config/dataset_config.py": {
+      "sha256": "400faef86090824ac7f334b199916fa7544cfd8d1fc2575245a73a78fe834ec1",
+      "size_bytes": 10220,
+      "upstream_url": "https://github.com/isaac-sim/IsaacLab-Arena/blob/8b4a3a47fc53de23e8205089d71109a2e2348acd/isaaclab_arena_gr00t/lerobot/config/dataset_config.py",
+      "inline_license": "SPDX-License-Identifier: Apache-2.0",
+      "fixture_path": "isaaclab_arena_gr00t/lerobot/config/dataset_config.py.txt"
+    },
+    "isaaclab_arena_gr00t/utils/joints_conversion.py": {
+      "sha256": "a9e1f3638be222221484129a2ee8c2a776275c685bd8aa07269c13618dd66386",
+      "size_bytes": 8525,
+      "upstream_url": "https://github.com/isaac-sim/IsaacLab-Arena/blob/8b4a3a47fc53de23e8205089d71109a2e2348acd/isaaclab_arena_gr00t/utils/joints_conversion.py",
+      "inline_license": "SPDX-License-Identifier: Apache-2.0",
+      "fixture_path": "isaaclab_arena_gr00t/utils/joints_conversion.py.txt"
+    },
+    "isaaclab_arena_gr00t/utils/robot_joints.py": {
+      "sha256": "510bf5507ed45e021e01a3fe8f26b5fd5ab6a31e035c1d5a16a72c72a7673206",
+      "size_bytes": 1408,
+      "upstream_url": "https://github.com/isaac-sim/IsaacLab-Arena/blob/8b4a3a47fc53de23e8205089d71109a2e2348acd/isaaclab_arena_gr00t/utils/robot_joints.py",
+      "inline_license": "SPDX-License-Identifier: Apache-2.0",
+      "fixture_path": "isaaclab_arena_gr00t/utils/robot_joints.py.txt"
+    },
+    "isaaclab_arena_gr00t/utils/io_utils.py": {
+      "sha256": "1e72d6b8ad862388180e253203d359d4abd6bcc75000dc37fb00d4404e6716a5",
+      "size_bytes": 9752,
+      "upstream_url": "https://github.com/isaac-sim/IsaacLab-Arena/blob/8b4a3a47fc53de23e8205089d71109a2e2348acd/isaaclab_arena_gr00t/utils/io_utils.py",
+      "inline_license": "SPDX-License-Identifier: Apache-2.0",
+      "fixture_path": "isaaclab_arena_gr00t/utils/io_utils.py.txt"
+    },
+    "isaaclab_arena_gr00t/lerobot/config/g1_static_apple_config.yaml": {
+      "sha256": "3dc9168a54d30f5d86c259b8620af075fd648d2236d8bb6c3646c72f51782c33",
+      "size_bytes": 2834,
+      "upstream_url": "https://github.com/isaac-sim/IsaacLab-Arena/blob/8b4a3a47fc53de23e8205089d71109a2e2348acd/isaaclab_arena_gr00t/lerobot/config/g1_static_apple_config.yaml",
+      "inline_license": "SPDX-License-Identifier: Apache-2.0",
+      "fixture_path": "isaaclab_arena_gr00t/lerobot/config/g1_static_apple_config.yaml"
+    },
+    "isaaclab_arena_gr00t/embodiments/g1/43dof_joint_space.yaml": {
+      "sha256": "ff7db8a6e4da8cb6ad40329bf0f5175de00d60f804e39c7183dc7d3c2e7d24a7",
+      "size_bytes": 1532,
+      "upstream_url": "https://github.com/isaac-sim/IsaacLab-Arena/blob/8b4a3a47fc53de23e8205089d71109a2e2348acd/isaaclab_arena_gr00t/embodiments/g1/43dof_joint_space.yaml",
+      "inline_license": "SPDX-License-Identifier: Apache-2.0",
+      "fixture_path": "isaaclab_arena_gr00t/embodiments/g1/43dof_joint_space.yaml"
+    },
+    "isaaclab_arena_gr00t/embodiments/g1/gr00t_43dof_joint_space.yaml": {
+      "sha256": "28226939039bd29fce7bf93d7f3fccce66bd3aa74a4c49e89d8229cd946357ae",
+      "size_bytes": 1614,
+      "upstream_url": "https://github.com/isaac-sim/IsaacLab-Arena/blob/8b4a3a47fc53de23e8205089d71109a2e2348acd/isaaclab_arena_gr00t/embodiments/g1/gr00t_43dof_joint_space.yaml",
+      "inline_license": "SPDX-License-Identifier: Apache-2.0",
+      "fixture_path": "isaaclab_arena_gr00t/embodiments/g1/gr00t_43dof_joint_space.yaml"
+    },
+    "isaaclab_arena_gr00t/embodiments/g1/modality.json": {
+      "sha256": "36dcaef30bb34a4c0337775932d83ea7b79b36f19e3a715239bab6852a09d9cc",
+      "size_bytes": 2729,
+      "upstream_url": "https://github.com/isaac-sim/IsaacLab-Arena/blob/8b4a3a47fc53de23e8205089d71109a2e2348acd/isaaclab_arena_gr00t/embodiments/g1/modality.json",
+      "inline_license": "No inline SPDX header; exact numeric modality mapping from same pinned component; no fabricated inline notice",
+      "fixture_path": "isaaclab_arena_gr00t/embodiments/g1/modality.json"
+    },
+    "isaaclab_arena_gr00t/embodiments/g1/info.json": {
+      "sha256": "8409bf66bc1efd58942c429b797667c950683d94e38f7427611c808cebee2b0f",
+      "size_bytes": 487,
+      "upstream_url": "https://github.com/isaac-sim/IsaacLab-Arena/blob/8b4a3a47fc53de23e8205089d71109a2e2348acd/isaaclab_arena_gr00t/embodiments/g1/info.json",
+      "inline_license": "No inline SPDX header; exact metadata template from same pinned component",
+      "fixture_path": "extra_info_template.json"
+    }
+  },
+  "physical_filenames": "Original Python filenames carry an inert .txt suffix for fixture storage only; byte content and logical upstream paths remain unchanged. They are never imported, executed or linted as project code."
+}

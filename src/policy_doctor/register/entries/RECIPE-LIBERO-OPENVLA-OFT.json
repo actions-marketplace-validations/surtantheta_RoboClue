@@ -1,0 +1,69 @@
+{
+  "applies_when": [
+    {
+      "checkpoint_id_in": [
+        "moojink/openvla-7b-oft-finetuned-libero-spatial"
+      ]
+    }
+  ],
+  "claim_basis": "release_metadata",
+  "evidence": [
+    {
+      "basis": "publisher_recipe",
+      "quote": "num_open_loop_steps: int = 8",
+      "source": {
+        "line": 100,
+        "path": "experiments/robot/libero/run_libero_eval.py",
+        "repo": "moojink/openvla-oft",
+        "sha": "e4287e94541f459edc4feabc4e181f537cd569a8"
+      },
+      "url": "https://github.com/moojink/openvla-oft/blob/e4287e94541f459edc4feabc4e181f537cd569a8/experiments/robot/libero/run_libero_eval.py#L100"
+    },
+    {
+      "basis": "publisher_recipe",
+      "quote": "we set them to the default values that work with the OpenVLA-OFT checkpoints above.",
+      "source": {
+        "line": 81,
+        "path": "LIBERO.md",
+        "repo": "moojink/openvla-oft",
+        "sha": "e4287e94541f459edc4feabc4e181f537cd569a8"
+      },
+      "url": "https://github.com/moojink/openvla-oft/blob/e4287e94541f459edc4feabc4e181f537cd569a8/LIBERO.md#L81"
+    }
+  ],
+  "first_fix": "set num_open_loop_steps to 8 to reproduce the published setup",
+  "healthy_controls": [
+    "The declared checkpoint with integer num_open_loop_steps=8: consistent",
+    "An explicitly selected unrelated stack with num_open_loop_steps=9: not_applicable"
+  ],
+  "id": "RECIPE-LIBERO-OPENVLA-OFT",
+  "kind": "recipe",
+  "last_verified": "2026-10-29",
+  "recipe_field": {
+    "checkpoint": "moojink/openvla-7b-oft-finetuned-libero-spatial",
+    "field": "num_open_loop_steps",
+    "published_value": 8,
+    "source_index": 0,
+    "status": "published"
+  },
+  "schema_version": 1,
+  "severity": "WARNING",
+  "stacks": [
+    "openvla-oft"
+  ],
+  "title": "Compare the explicit typed evaluation configuration with the pinned publisher recipe",
+  "unknown_when": "Supply the actual resolved evaluation config containing typed num_open_loop_steps, the explicit checkpoint_id and complete selected stacks. Launch flag strings and absent flags do not supply an actual config or default; no execution or historical training provenance is attested. Unrecognized checkpoint identities are UNKNOWN rather than evidenced unaffected checkpoints.",
+  "validation": {
+    "record": "content/VERDICT.md",
+    "status": "confirmed"
+  },
+  "violation_when": [
+    {
+      "config_key": {
+        "op": "ne",
+        "path": "num_open_loop_steps",
+        "value": 8
+      }
+    }
+  ]
+}

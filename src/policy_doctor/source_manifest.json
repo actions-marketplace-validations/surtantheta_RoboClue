@@ -1,0 +1,41 @@
+{
+  "files": {
+    "scripts/serve_policy.py": {
+      "sha256": "eccc0448b4873fd30a1fff3355c5de7a7c227138e6db04b7dcaa5bb38a6a5809",
+      "size_bytes": 3687
+    },
+    "src/openpi/models/model.py": {
+      "sha256": "0d74bc1d8f4623ac3d8e543710b8bf75f9b95e588a3ebf6127c659e001385cff",
+      "size_bytes": 12270
+    },
+    "src/openpi/models/pi0_config.py": {
+      "sha256": "d321858c30b398126035ea2b6da09e1c422eeeebb5ebf8df631daf9dc77647fa",
+      "size_bytes": 4435
+    },
+    "src/openpi/models/pi0_fast.py": {
+      "sha256": "627332a555046f2744ef144c45f8bd3361a9820cf68854a4528d0fdbba7e9aa3",
+      "size_bytes": 13209
+    },
+    "src/openpi/policies/droid_policy.py": {
+      "sha256": "99ebf8b252bde5e33dba7af10552137c421589ec88887bb0ee6507366d24da68",
+      "size_bytes": 3188
+    },
+    "src/openpi/policies/policy_config.py": {
+      "sha256": "aaf42ab04a33b6c91d2447926211646c33ebd8ebfa427f026d7b6c4f7c45ec52",
+      "size_bytes": 4107
+    },
+    "src/openpi/training/config.py": {
+      "sha256": "c34231f888dba5dc981d808765b3d98775ab845b04313bf53fcecd567c520b0d",
+      "size_bytes": 44594
+    },
+    "src/openpi/transforms.py": {
+      "sha256": "a1b94e9e72849a18834778f229c6bb389a495eb7fbe0aa800edea728b9424ff4",
+      "size_bytes": 15752
+    },
+    "uv.lock": {
+      "sha256": "793488b5a55bb87200db90a61fd0af51922b686d94e1da4f4c587ab119b37d74",
+      "size_bytes": 795910
+    }
+  },
+  "revision": "215abfb217dbac7d5f1273282331b9b1866c0479"
+}

@@ -1,0 +1,1233 @@
+{
+  "provenance": {
+    "purpose": "Actual native float32 saved statistics versus a complete numeric row cohort; native arithmetic loses some spread precision. Test-generated values, not recorded robot data.",
+    "native_source": "https://github.com/huggingface/lerobot/blob/146d8474932c8b566717eb2738ba459337ab71c4/src/lerobot/datasets/compute_stats.py",
+    "native_module_sha256": "1086e891766d7330e3eae5e0e402161a9c6870e860c385941112dae1a01f2bb7",
+    "native_numpy": "2.2.6",
+    "native_function": "get_feature_stats(array_float32, axis=0, keepdims=False)",
+    "rng": "numpy.default_rng(4); consume normal(0,.3,(103,2)); then normal(73.5,.3,(103,2)).astype(float32)"
+  },
+  "info": {
+    "codebase_version": "v3.0",
+    "fps": 10,
+    "total_frames": 103,
+    "total_episodes": 1,
+    "total_tasks": 1,
+    "chunks_size": 1000,
+    "splits": {
+      "train": "0:1"
+    },
+    "data_path": "data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet",
+    "features": {
+      "action": {
+        "dtype": "float32",
+        "shape": [
+          2
+        ],
+        "names": [
+          "a",
+          "b"
+        ]
+      }
+    }
+  },
+  "stats": {
+    "action": {
+      "min": [
+        72.5547103881836,
+        72.73184204101562
+      ],
+      "max": [
+        74.34130096435547,
+        74.16194152832031
+      ],
+      "mean": [
+        73.54511260986328,
+        73.46957397460938
+      ],
+      "std": [
+        0.326259583234787,
+        0.28125
+      ],
+      "count": [
+        103
+      ],
+      "q01": [
+        72.75052955627442,
+        72.88945091247558
+      ],
+      "q10": [
+        73.19227447509766,
+        73.07715148925782
+      ],
+      "q50": [
+        73.53001022338867,
+        73.48221588134766
+      ],
+      "q90": [
+        73.96958084106446,
+        73.82950286865234
+      ],
+      "q99": [
+        74.28876205444335,
+        74.02635871887207
+      ]
+    }
+  },
+  "rows": [
+    {
+      "index": 0,
+      "episode_index": 0,
+      "frame_index": 0,
+      "timestamp": 0.0,
+      "task_index": 0,
+      "action": [
+        73.39799499511719,
+        73.61538696289062
+      ]
+    },
+    {
+      "index": 1,
+      "episode_index": 0,
+      "frame_index": 1,
+      "timestamp": 0.1,
+      "task_index": 0,
+      "action": [
+        73.09050750732422,
+        73.0448989868164
+      ]
+    },
+    {
+      "index": 2,
+      "episode_index": 0,
+      "frame_index": 2,
+      "timestamp": 0.2,
+      "task_index": 0,
+      "action": [
+        73.55570220947266,
+        73.76301574707031
+      ]
+    },
+    {
+      "index": 3,
+      "episode_index": 0,
+      "frame_index": 3,
+      "timestamp": 0.3,
+      "task_index": 0,
+      "action": [
+        73.35736083984375,
+        73.90316772460938
+      ]
+    },
+    {
+      "index": 4,
+      "episode_index": 0,
+      "frame_index": 4,
+      "timestamp": 0.4,
+      "task_index": 0,
+      "action": [
+        73.26602172851562,
+        74.02630615234375
+      ]
+    },
+    {
+      "index": 5,
+      "episode_index": 0,
+      "frame_index": 5,
+      "timestamp": 0.5,
+      "task_index": 0,
+      "action": [
+        73.53612518310547,
+        73.57059478759766
+      ]
+    },
+    {
+      "index": 6,
+      "episode_index": 0,
+      "frame_index": 6,
+      "timestamp": 0.6,
+      "task_index": 0,
+      "action": [
+        73.68447875976562,
+        73.59630584716797
+      ]
+    },
+    {
+      "index": 7,
+      "episode_index": 0,
+      "frame_index": 7,
+      "timestamp": 0.7,
+      "task_index": 0,
+      "action": [
+        74.0537338256836,
+        74.16194152832031
+      ]
+    },
+    {
+      "index": 8,
+      "episode_index": 0,
+      "frame_index": 8,
+      "timestamp": 0.8,
+      "task_index": 0,
+      "action": [
+        73.66383361816406,
+        73.45028686523438
+      ]
+    },
+    {
+      "index": 9,
+      "episode_index": 0,
+      "frame_index": 9,
+      "timestamp": 0.9,
+      "task_index": 0,
+      "action": [
+        73.14717102050781,
+        73.27368927001953
+      ]
+    },
+    {
+      "index": 10,
+      "episode_index": 0,
+      "frame_index": 10,
+      "timestamp": 1.0,
+      "task_index": 0,
+      "action": [
+        73.50277709960938,
+        73.46959686279297
+      ]
+    },
+    {
+      "index": 11,
+      "episode_index": 0,
+      "frame_index": 11,
+      "timestamp": 1.1,
+      "task_index": 0,
+      "action": [
+        73.48690032958984,
+        73.50151824951172
+      ]
+    },
+    {
+      "index": 12,
+      "episode_index": 0,
+      "frame_index": 12,
+      "timestamp": 1.2,
+      "task_index": 0,
+      "action": [
+        73.6486587524414,
+        73.09479522705078
+      ]
+    },
+    {
+      "index": 13,
+      "episode_index": 0,
+      "frame_index": 13,
+      "timestamp": 1.3,
+      "task_index": 0,
+      "action": [
+        73.1923599243164,
+        73.83657836914062
+      ]
+    },
+    {
+      "index": 14,
+      "episode_index": 0,
+      "frame_index": 14,
+      "timestamp": 1.4,
+      "task_index": 0,
+      "action": [
+        73.7514877319336,
+        73.33926391601562
+      ]
+    },
+    {
+      "index": 15,
+      "episode_index": 0,
+      "frame_index": 15,
+      "timestamp": 1.5,
+      "task_index": 0,
+      "action": [
+        73.88860321044922,
+        73.29708099365234
+      ]
+    },
+    {
+      "index": 16,
+      "episode_index": 0,
+      "frame_index": 16,
+      "timestamp": 1.6,
+      "task_index": 0,
+      "action": [
+        73.4244613647461,
+        72.95236206054688
+      ]
+    },
+    {
+      "index": 17,
+      "episode_index": 0,
+      "frame_index": 17,
+      "timestamp": 1.7,
+      "task_index": 0,
+      "action": [
+        73.75413513183594,
+        73.49737548828125
+      ]
+    },
+    {
+      "index": 18,
+      "episode_index": 0,
+      "frame_index": 18,
+      "timestamp": 1.8,
+      "task_index": 0,
+      "action": [
+        73.82093811035156,
+        73.71277618408203
+      ]
+    },
+    {
+      "index": 19,
+      "episode_index": 0,
+      "frame_index": 19,
+      "timestamp": 1.9,
+      "task_index": 0,
+      "action": [
+        73.52983856201172,
+        73.5498046875
+      ]
+    },
+    {
+      "index": 20,
+      "episode_index": 0,
+      "frame_index": 20,
+      "timestamp": 2.0,
+      "task_index": 0,
+      "action": [
+        73.8606185913086,
+        73.45355987548828
+      ]
+    },
+    {
+      "index": 21,
+      "episode_index": 0,
+      "frame_index": 21,
+      "timestamp": 2.1,
+      "task_index": 0,
+      "action": [
+        73.45731353759766,
+        73.52405548095703
+      ]
+    },
+    {
+      "index": 22,
+      "episode_index": 0,
+      "frame_index": 22,
+      "timestamp": 2.2,
+      "task_index": 0,
+      "action": [
+        73.74562072753906,
+        73.78145599365234
+      ]
+    },
+    {
+      "index": 23,
+      "episode_index": 0,
+      "frame_index": 23,
+      "timestamp": 2.3,
+      "task_index": 0,
+      "action": [
+        74.08035278320312,
+        73.48231506347656
+      ]
+    },
+    {
+      "index": 24,
+      "episode_index": 0,
+      "frame_index": 24,
+      "timestamp": 2.4,
+      "task_index": 0,
+      "action": [
+        73.88654327392578,
+        73.31224822998047
+      ]
+    },
+    {
+      "index": 25,
+      "episode_index": 0,
+      "frame_index": 25,
+      "timestamp": 2.5,
+      "task_index": 0,
+      "action": [
+        73.69050598144531,
+        73.54789733886719
+      ]
+    },
+    {
+      "index": 26,
+      "episode_index": 0,
+      "frame_index": 26,
+      "timestamp": 2.6,
+      "task_index": 0,
+      "action": [
+        74.03157806396484,
+        73.69450378417969
+      ]
+    },
+    {
+      "index": 27,
+      "episode_index": 0,
+      "frame_index": 27,
+      "timestamp": 2.7,
+      "task_index": 0,
+      "action": [
+        73.37776947021484,
+        73.68614959716797
+      ]
+    },
+    {
+      "index": 28,
+      "episode_index": 0,
+      "frame_index": 28,
+      "timestamp": 2.8,
+      "task_index": 0,
+      "action": [
+        73.61695098876953,
+        73.41832733154297
+      ]
+    },
+    {
+      "index": 29,
+      "episode_index": 0,
+      "frame_index": 29,
+      "timestamp": 2.9,
+      "task_index": 0,
+      "action": [
+        73.42528533935547,
+        73.2306900024414
+      ]
+    },
+    {
+      "index": 30,
+      "episode_index": 0,
+      "frame_index": 30,
+      "timestamp": 3.0,
+      "task_index": 0,
+      "action": [
+        74.34130096435547,
+        73.55487060546875
+      ]
+    },
+    {
+      "index": 31,
+      "episode_index": 0,
+      "frame_index": 31,
+      "timestamp": 3.1,
+      "task_index": 0,
+      "action": [
+        73.80679321289062,
+        73.16490173339844
+      ]
+    },
+    {
+      "index": 32,
+      "episode_index": 0,
+      "frame_index": 32,
+      "timestamp": 3.2,
+      "task_index": 0,
+      "action": [
+        73.1889419555664,
+        73.46883392333984
+      ]
+    },
+    {
+      "index": 33,
+      "episode_index": 0,
+      "frame_index": 33,
+      "timestamp": 3.3,
+      "task_index": 0,
+      "action": [
+        73.47021484375,
+        73.75566101074219
+      ]
+    },
+    {
+      "index": 34,
+      "episode_index": 0,
+      "frame_index": 34,
+      "timestamp": 3.4,
+      "task_index": 0,
+      "action": [
+        73.21388244628906,
+        73.6770248413086
+      ]
+    },
+    {
+      "index": 35,
+      "episode_index": 0,
+      "frame_index": 35,
+      "timestamp": 3.5,
+      "task_index": 0,
+      "action": [
+        73.96966552734375,
+        73.24090576171875
+      ]
+    },
+    {
+      "index": 36,
+      "episode_index": 0,
+      "frame_index": 36,
+      "timestamp": 3.6,
+      "task_index": 0,
+      "action": [
+        73.78813934326172,
+        73.2270278930664
+      ]
+    },
+    {
+      "index": 37,
+      "episode_index": 0,
+      "frame_index": 37,
+      "timestamp": 3.7,
+      "task_index": 0,
+      "action": [
+        73.61908721923828,
+        73.62425231933594
+      ]
+    },
+    {
+      "index": 38,
+      "episode_index": 0,
+      "frame_index": 38,
+      "timestamp": 3.8,
+      "task_index": 0,
+      "action": [
+        74.03648376464844,
+        73.30805206298828
+      ]
+    },
+    {
+      "index": 39,
+      "episode_index": 0,
+      "frame_index": 39,
+      "timestamp": 3.9,
+      "task_index": 0,
+      "action": [
+        73.56576538085938,
+        73.82835388183594
+      ]
+    },
+    {
+      "index": 40,
+      "episode_index": 0,
+      "frame_index": 40,
+      "timestamp": 4.0,
+      "task_index": 0,
+      "action": [
+        73.16363525390625,
+        73.51250457763672
+      ]
+    },
+    {
+      "index": 41,
+      "episode_index": 0,
+      "frame_index": 41,
+      "timestamp": 4.1,
+      "task_index": 0,
+      "action": [
+        73.2541732788086,
+        73.30457305908203
+      ]
+    },
+    {
+      "index": 42,
+      "episode_index": 0,
+      "frame_index": 42,
+      "timestamp": 4.2,
+      "task_index": 0,
+      "action": [
+        73.71973419189453,
+        73.72528839111328
+      ]
+    },
+    {
+      "index": 43,
+      "episode_index": 0,
+      "frame_index": 43,
+      "timestamp": 4.3,
+      "task_index": 0,
+      "action": [
+        74.2884292602539,
+        73.92823791503906
+      ]
+    },
+    {
+      "index": 44,
+      "episode_index": 0,
+      "frame_index": 44,
+      "timestamp": 4.4,
+      "task_index": 0,
+      "action": [
+        73.90181732177734,
+        73.46497344970703
+      ]
+    },
+    {
+      "index": 45,
+      "episode_index": 0,
+      "frame_index": 45,
+      "timestamp": 4.5,
+      "task_index": 0,
+      "action": [
+        73.42472839355469,
+        73.5558090209961
+      ]
+    },
+    {
+      "index": 46,
+      "episode_index": 0,
+      "frame_index": 46,
+      "timestamp": 4.6,
+      "task_index": 0,
+      "action": [
+        72.83197021484375,
+        74.01142883300781
+      ]
+    },
+    {
+      "index": 47,
+      "episode_index": 0,
+      "frame_index": 47,
+      "timestamp": 4.7,
+      "task_index": 0,
+      "action": [
+        73.31261444091797,
+        73.19544982910156
+      ]
+    },
+    {
+      "index": 48,
+      "episode_index": 0,
+      "frame_index": 48,
+      "timestamp": 4.8,
+      "task_index": 0,
+      "action": [
+        73.37557983398438,
+        73.77506256103516
+      ]
+    },
+    {
+      "index": 49,
+      "episode_index": 0,
+      "frame_index": 49,
+      "timestamp": 4.9,
+      "task_index": 0,
+      "action": [
+        73.8850326538086,
+        73.39849853515625
+      ]
+    },
+    {
+      "index": 50,
+      "episode_index": 0,
+      "frame_index": 50,
+      "timestamp": 5.0,
+      "task_index": 0,
+      "action": [
+        73.64190673828125,
+        73.49351501464844
+      ]
+    },
+    {
+      "index": 51,
+      "episode_index": 0,
+      "frame_index": 51,
+      "timestamp": 5.1,
+      "task_index": 0,
+      "action": [
+        73.21134948730469,
+        73.56079864501953
+      ]
+    },
+    {
+      "index": 52,
+      "episode_index": 0,
+      "frame_index": 52,
+      "timestamp": 5.2,
+      "task_index": 0,
+      "action": [
+        73.51773834228516,
+        73.0478515625
+      ]
+    },
+    {
+      "index": 53,
+      "episode_index": 0,
+      "frame_index": 53,
+      "timestamp": 5.3,
+      "task_index": 0,
+      "action": [
+        73.83893585205078,
+        73.03705596923828
+      ]
+    },
+    {
+      "index": 54,
+      "episode_index": 0,
+      "frame_index": 54,
+      "timestamp": 5.4,
+      "task_index": 0,
+      "action": [
+        73.57838439941406,
+        73.19294738769531
+      ]
+    },
+    {
+      "index": 55,
+      "episode_index": 0,
+      "frame_index": 55,
+      "timestamp": 5.5,
+      "task_index": 0,
+      "action": [
+        73.26348114013672,
+        73.2967758178711
+      ]
+    },
+    {
+      "index": 56,
+      "episode_index": 0,
+      "frame_index": 56,
+      "timestamp": 5.6,
+      "task_index": 0,
+      "action": [
+        73.7187728881836,
+        73.13079833984375
+      ]
+    },
+    {
+      "index": 57,
+      "episode_index": 0,
+      "frame_index": 57,
+      "timestamp": 5.7,
+      "task_index": 0,
+      "action": [
+        73.44969177246094,
+        73.9722671508789
+      ]
+    },
+    {
+      "index": 58,
+      "episode_index": 0,
+      "frame_index": 58,
+      "timestamp": 5.8,
+      "task_index": 0,
+      "action": [
+        73.2976303100586,
+        73.49664306640625
+      ]
+    },
+    {
+      "index": 59,
+      "episode_index": 0,
+      "frame_index": 59,
+      "timestamp": 5.9,
+      "task_index": 0,
+      "action": [
+        73.70525360107422,
+        73.33088684082031
+      ]
+    },
+    {
+      "index": 60,
+      "episode_index": 0,
+      "frame_index": 60,
+      "timestamp": 6.0,
+      "task_index": 0,
+      "action": [
+        73.64811706542969,
+        73.30709075927734
+      ]
+    },
+    {
+      "index": 61,
+      "episode_index": 0,
+      "frame_index": 61,
+      "timestamp": 6.1,
+      "task_index": 0,
+      "action": [
+        73.71517181396484,
+        73.5238265991211
+      ]
+    },
+    {
+      "index": 62,
+      "episode_index": 0,
+      "frame_index": 62,
+      "timestamp": 6.2,
+      "task_index": 0,
+      "action": [
+        73.22413635253906,
+        73.92768859863281
+      ]
+    },
+    {
+      "index": 63,
+      "episode_index": 0,
+      "frame_index": 63,
+      "timestamp": 6.3,
+      "task_index": 0,
+      "action": [
+        73.47642517089844,
+        73.42088317871094
+      ]
+    },
+    {
+      "index": 64,
+      "episode_index": 0,
+      "frame_index": 64,
+      "timestamp": 6.4,
+      "task_index": 0,
+      "action": [
+        73.22734832763672,
+        73.36373901367188
+      ]
+    },
+    {
+      "index": 65,
+      "episode_index": 0,
+      "frame_index": 65,
+      "timestamp": 6.5,
+      "task_index": 0,
+      "action": [
+        73.47576904296875,
+        73.55619049072266
+      ]
+    },
+    {
+      "index": 66,
+      "episode_index": 0,
+      "frame_index": 66,
+      "timestamp": 6.6,
+      "task_index": 0,
+      "action": [
+        73.83401489257812,
+        73.1090316772461
+      ]
+    },
+    {
+      "index": 67,
+      "episode_index": 0,
+      "frame_index": 67,
+      "timestamp": 6.7,
+      "task_index": 0,
+      "action": [
+        73.39952850341797,
+        73.8631362915039
+      ]
+    },
+    {
+      "index": 68,
+      "episode_index": 0,
+      "frame_index": 68,
+      "timestamp": 6.8,
+      "task_index": 0,
+      "action": [
+        73.5587387084961,
+        73.62660217285156
+      ]
+    },
+    {
+      "index": 69,
+      "episode_index": 0,
+      "frame_index": 69,
+      "timestamp": 6.9,
+      "task_index": 0,
+      "action": [
+        73.98199462890625,
+        73.60529327392578
+      ]
+    },
+    {
+      "index": 70,
+      "episode_index": 0,
+      "frame_index": 70,
+      "timestamp": 7.0,
+      "task_index": 0,
+      "action": [
+        73.64389038085938,
+        73.49168395996094
+      ]
+    },
+    {
+      "index": 71,
+      "episode_index": 0,
+      "frame_index": 71,
+      "timestamp": 7.1,
+      "task_index": 0,
+      "action": [
+        74.03419494628906,
+        73.81883239746094
+      ]
+    },
+    {
+      "index": 72,
+      "episode_index": 0,
+      "frame_index": 72,
+      "timestamp": 7.2,
+      "task_index": 0,
+      "action": [
+        73.2873306274414,
+        73.66812896728516
+      ]
+    },
+    {
+      "index": 73,
+      "episode_index": 0,
+      "frame_index": 73,
+      "timestamp": 7.3,
+      "task_index": 0,
+      "action": [
+        73.15901184082031,
+        73.82949829101562
+      ]
+    },
+    {
+      "index": 74,
+      "episode_index": 0,
+      "frame_index": 74,
+      "timestamp": 7.4,
+      "task_index": 0,
+      "action": [
+        73.70462036132812,
+        73.45494842529297
+      ]
+    },
+    {
+      "index": 75,
+      "episode_index": 0,
+      "frame_index": 75,
+      "timestamp": 7.5,
+      "task_index": 0,
+      "action": [
+        73.38212585449219,
+        72.96395111083984
+      ]
+    },
+    {
+      "index": 76,
+      "episode_index": 0,
+      "frame_index": 76,
+      "timestamp": 7.6,
+      "task_index": 0,
+      "action": [
+        73.73129272460938,
+        73.46685791015625
+      ]
+    },
+    {
+      "index": 77,
+      "episode_index": 0,
+      "frame_index": 77,
+      "timestamp": 7.7,
+      "task_index": 0,
+      "action": [
+        73.40829467773438,
+        73.71854400634766
+      ]
+    },
+    {
+      "index": 78,
+      "episode_index": 0,
+      "frame_index": 78,
+      "timestamp": 7.8,
+      "task_index": 0,
+      "action": [
+        73.30192565917969,
+        73.3250732421875
+      ]
+    },
+    {
+      "index": 79,
+      "episode_index": 0,
+      "frame_index": 79,
+      "timestamp": 7.9,
+      "task_index": 0,
+      "action": [
+        73.29255676269531,
+        73.09464263916016
+      ]
+    },
+    {
+      "index": 80,
+      "episode_index": 0,
+      "frame_index": 80,
+      "timestamp": 8.0,
+      "task_index": 0,
+      "action": [
+        74.22322082519531,
+        73.4417724609375
+      ]
+    },
+    {
+      "index": 81,
+      "episode_index": 0,
+      "frame_index": 81,
+      "timestamp": 8.1,
+      "task_index": 0,
+      "action": [
+        73.39484405517578,
+        73.7698974609375
+      ]
+    },
+    {
+      "index": 82,
+      "episode_index": 0,
+      "frame_index": 82,
+      "timestamp": 8.2,
+      "task_index": 0,
+      "action": [
+        72.5547103881836,
+        73.49002075195312
+      ]
+    },
+    {
+      "index": 83,
+      "episode_index": 0,
+      "frame_index": 83,
+      "timestamp": 8.3,
+      "task_index": 0,
+      "action": [
+        73.50276184082031,
+        73.20709228515625
+      ]
+    },
+    {
+      "index": 84,
+      "episode_index": 0,
+      "frame_index": 84,
+      "timestamp": 8.4,
+      "task_index": 0,
+      "action": [
+        73.63594818115234,
+        72.88947296142578
+      ]
+    },
+    {
+      "index": 85,
+      "episode_index": 0,
+      "frame_index": 85,
+      "timestamp": 8.5,
+      "task_index": 0,
+      "action": [
+        73.49728393554688,
+        73.75829315185547
+      ]
+    },
+    {
+      "index": 86,
+      "episode_index": 0,
+      "frame_index": 86,
+      "timestamp": 8.6,
+      "task_index": 0,
+      "action": [
+        72.82352447509766,
+        73.05253601074219
+      ]
+    },
+    {
+      "index": 87,
+      "episode_index": 0,
+      "frame_index": 87,
+      "timestamp": 8.7,
+      "task_index": 0,
+      "action": [
+        73.43623352050781,
+        73.47405242919922
+      ]
+    },
+    {
+      "index": 88,
+      "episode_index": 0,
+      "frame_index": 88,
+      "timestamp": 8.8,
+      "task_index": 0,
+      "action": [
+        73.28129577636719,
+        73.5802001953125
+      ]
+    },
+    {
+      "index": 89,
+      "episode_index": 0,
+      "frame_index": 89,
+      "timestamp": 8.9,
+      "task_index": 0,
+      "action": [
+        73.54137420654297,
+        73.06095123291016
+      ]
+    },
+    {
+      "index": 90,
+      "episode_index": 0,
+      "frame_index": 90,
+      "timestamp": 9.0,
+      "task_index": 0,
+      "action": [
+        73.43270111083984,
+        73.07734680175781
+      ]
+    },
+    {
+      "index": 91,
+      "episode_index": 0,
+      "frame_index": 91,
+      "timestamp": 9.1,
+      "task_index": 0,
+      "action": [
+        72.8346939086914,
+        72.73184204101562
+      ]
+    },
+    {
+      "index": 92,
+      "episode_index": 0,
+      "frame_index": 92,
+      "timestamp": 9.2,
+      "task_index": 0,
+      "action": [
+        73.761962890625,
+        73.41350555419922
+      ]
+    },
+    {
+      "index": 93,
+      "episode_index": 0,
+      "frame_index": 93,
+      "timestamp": 9.3,
+      "task_index": 0,
+      "action": [
+        74.0379638671875,
+        73.0107192993164
+      ]
+    },
+    {
+      "index": 94,
+      "episode_index": 0,
+      "frame_index": 94,
+      "timestamp": 9.4,
+      "task_index": 0,
+      "action": [
+        73.34239959716797,
+        73.55001068115234
+      ]
+    },
+    {
+      "index": 95,
+      "episode_index": 0,
+      "frame_index": 95,
+      "timestamp": 9.5,
+      "task_index": 0,
+      "action": [
+        73.40522003173828,
+        73.59869384765625
+      ]
+    },
+    {
+      "index": 96,
+      "episode_index": 0,
+      "frame_index": 96,
+      "timestamp": 9.6,
+      "task_index": 0,
+      "action": [
+        73.49256134033203,
+        73.2648696899414
+      ]
+    },
+    {
+      "index": 97,
+      "episode_index": 0,
+      "frame_index": 97,
+      "timestamp": 9.7,
+      "task_index": 0,
+      "action": [
+        72.7507095336914,
+        73.16556549072266
+      ]
+    },
+    {
+      "index": 98,
+      "episode_index": 0,
+      "frame_index": 98,
+      "timestamp": 9.8,
+      "task_index": 0,
+      "action": [
+        73.96784973144531,
+        73.68248748779297
+      ]
+    },
+    {
+      "index": 99,
+      "episode_index": 0,
+      "frame_index": 99,
+      "timestamp": 9.9,
+      "task_index": 0,
+      "action": [
+        73.86701965332031,
+        73.2790756225586
+      ]
+    },
+    {
+      "index": 100,
+      "episode_index": 0,
+      "frame_index": 100,
+      "timestamp": 10.0,
+      "task_index": 0,
+      "action": [
+        73.3985595703125,
+        73.1940689086914
+      ]
+    },
+    {
+      "index": 101,
+      "episode_index": 0,
+      "frame_index": 101,
+      "timestamp": 10.1,
+      "task_index": 0,
+      "action": [
+        73.57572174072266,
+        73.47794342041016
+      ]
+    },
+    {
+      "index": 102,
+      "episode_index": 0,
+      "frame_index": 102,
+      "timestamp": 10.2,
+      "task_index": 0,
+      "action": [
+        73.59612274169922,
+        73.98973083496094
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "episode_index": 0,
+      "tasks": [
+        "t"
+      ],
+      "length": 103,
+      "dataset_from_index": 0,
+      "dataset_to_index": 103,
+      "data/chunk_index": 0,
+      "data/file_index": 0,
+      "meta/episodes/chunk_index": 0,
+      "meta/episodes/file_index": 0
+    }
+  ],
+  "tasks": [
+    {
+      "task_index": 0,
+      "task": "t"
+    }
+  ]
+}

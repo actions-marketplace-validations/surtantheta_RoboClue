@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "unfilled_template_no_participant_or_measurement",
+  "route": null,
+  "participant_reference": null,
+  "task_and_supported_scope": null,
+  "input_and_contract_provenance": [],
+  "answer_exposure": null,
+  "route_order_and_learning_effects": null,
+  "supplied_setup": [],
+  "existing_native_helpers_and_upstream_fixes": [],
+  "shared_setup_and_allocation_rationale": [],
+  "phases": {
+    "dependency_source_data_preparation": null,
+    "contract_and_reference_selection": null,
+    "first_supported_answer": null,
+    "correction_verification": null,
+    "retained_case_handoff": null,
+    "independent_colleague_reproduction": null,
+    "later_observation_reuse": null
+  },
+  "phase_record_fields": ["hands_on_seconds", "machine_seconds", "new_helper_authorship_seconds", "code_written", "repairs", "failures", "interruptions", "artifact_receipts", "omissions"],
+  "independent_correctness_assessment": null,
+  "abandonment_and_reason": null,
+  "stated_reuse_intent": null,
+  "actual_voluntary_reuse": null,
+  "human_time_savings_claim": null,
+  "community_adoption_claim": null
+}

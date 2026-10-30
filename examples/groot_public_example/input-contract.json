@@ -1,0 +1,32 @@
+{
+  "kind": "native-observation-source",
+  "parameters": {
+    "contract": {
+      "kind": "IPEC_LIBERO_selected_source_preservation",
+      "association": "explicit",
+      "boundary": "policy_get_action_input_pre_normalization",
+      "state_layout": [
+        "x",
+        "y",
+        "z",
+        "axis_angle1",
+        "axis_angle2",
+        "axis_angle3",
+        "gripper",
+        "gripper"
+      ],
+      "ordered_source_streams": [
+        {
+          "input": "agentview",
+          "model": "image",
+          "source": "observation.images.image"
+        },
+        {
+          "input": "wrist",
+          "model": "wrist_image",
+          "source": "observation.images.wrist_image"
+        }
+      ]
+    }
+  }
+}

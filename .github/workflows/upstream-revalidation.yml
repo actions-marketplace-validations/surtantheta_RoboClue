@@ -1,0 +1,46 @@
+name: upstream compatibility review
+'on':
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * 1'
+permissions:
+  contents: read
+jobs:
+  portable-contracts-and-source-drift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install this reviewed source
+        run: python -m pip install '.[dev]'
+      - name: Re-run portable adapter and diagnostic regressions
+        run: >-
+          python -m pytest -q
+          tests/test_lerobot_training_guard.py
+          tests/test_groot_training_guard.py
+          tests/test_openpi_training_guard.py
+          tests/test_sim_guards.py
+          tests/test_salvage.py
+          tests/test_downstream_automation.py
+          tests/test_upstream_revalidation.py
+          tests/test_rule_catalog.py
+          tests/test_framework_versions.py
+          --junitxml=upstream-contracts.xml
+      - name: Observe upstream source drift without certifying new releases
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/revalidate_upstream.py --fetch --output upstream-observations.json
+      - name: Explain the qualification boundary
+        if: always()
+        run: |
+          printf '%s\n' 'Portable tests and upstream source observations are retained below. This job does not run native GPU trainers or qualify a new framework release. Source drift or unavailable evidence blocks review until the affected native/source qualification is renewed.' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: upstream-compatibility-review
+          path: |
+            upstream-contracts.xml
+            upstream-observations.json

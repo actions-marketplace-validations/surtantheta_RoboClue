@@ -1,0 +1,79 @@
+{
+  "applies_when": [
+    {
+      "package_version": {
+        "package": "robosuite",
+        "version": {
+          "eq": "1.4.0"
+        }
+      }
+    },
+    {
+      "package_version": {
+        "package": "mujoco",
+        "version": {
+          "eq": "3.10.0"
+        }
+      }
+    }
+  ],
+  "claim_basis": "release_metadata",
+  "evidence": [
+    {
+      "basis": "user_report",
+      "quote": "There is an API change in `mj_fullM` in Mujoco 3.10",
+      "source": {
+        "line": 156,
+        "path": "robosuite/controllers/base_controller.py",
+        "repo": "ARISE-Initiative/robosuite",
+        "sha": "fbee5844ff5632f5b5698e204ec5357ca50be0df"
+      },
+      "url": "https://github.com/ARISE-Initiative/robosuite/issues/817"
+    },
+    {
+      "basis": "user_report",
+      "quote": "API change in `mj_fullM`",
+      "source": {
+        "line": 594,
+        "path": "python/mujoco/functions.cc",
+        "repo": "google-deepmind/mujoco",
+        "sha": "28009f9105cd92784b7b0b30c0605a5e29107a77"
+      },
+      "url": "https://github.com/ARISE-Initiative/robosuite/issues/817"
+    }
+  ],
+  "first_fix": "For this exact incompatible pair, pin MuJoCo 3.9.0 (publicly reported working), or 3.3.2 for the LIBERO evaluation setup; this entry does not qualify other release pairs.",
+  "healthy_controls": [
+    "robosuite 1.4.0 / MuJoCo 3.9.0: outside this exact incompatible pair; no finding, aggregate unassessed UNKNOWN",
+    "robosuite 1.5.2 / MuJoCo 3.3.2: outside this exact incompatible pair; no finding, aggregate unassessed UNKNOWN"
+  ],
+  "id": "MUJOCO-310-ROBOSUITE-140-CRASH",
+  "kind": "version_trap",
+  "last_verified": "2026-10-29",
+  "schema_version": 1,
+  "severity": "ERROR",
+  "stacks": [
+    "robosuite",
+    "libero",
+    "lerobot",
+    "groot",
+    "openvla",
+    "openvla-oft"
+  ],
+  "title": "The exact robosuite 1.4.0 / MuJoCo 3.10.0 released API pair is incompatible: the controller passes an array where mj_fullM requires MjData",
+  "unknown_when": "Only robosuite==1.4.0 with MuJoCo==3.10.0 is qualified by this exact API-source comparison. Other releases, local/post versions and future versions are outside its scope and remain unassessed. Missing/conflicting versions remain UNKNOWN. Package metadata does not attest custom source or execution.",
+  "validation": {
+    "record": "content/VERDICT.md",
+    "status": "confirmed"
+  },
+  "violation_when": [
+    {
+      "package_version": {
+        "package": "mujoco",
+        "version": {
+          "eq": "3.10.0"
+        }
+      }
+    }
+  ]
+}

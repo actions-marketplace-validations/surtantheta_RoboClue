@@ -1,0 +1,18 @@
+SPDX-License-Identifier: CC-BY-4.0
+
+Target/mask fixtures derived from NVIDIA Corporation, Arena-G1-Static-PickNPlace-Task.
+Public recorded simulation data, not physical-robot measurements.
+Source: https://huggingface.co/datasets/nvidia/Arena-G1-Static-PickNPlace-Task/tree/37ba80a99486a4c308477854f54b4e82e77777dc
+Dataset card: https://huggingface.co/datasets/nvidia/Arena-G1-Static-PickNPlace-Task/resolve/37ba80a99486a4c308477854f54b4e82e77777dc/README.md
+License: https://huggingface.co/datasets/nvidia/Arena-G1-Static-PickNPlace-Task/resolve/37ba80a99486a4c308477854f54b4e82e77777dc/LICENCE
+Canonical license: https://creativecommons.org/licenses/by/4.0/
+
+Changes: original public recording was converted by IsaacLab-Arena converter
+8b4a3a47fc53de23e8205089d71109a2e2348acd, then processed by native GR00T
+944fe70c4fd54e3fcb80a7d7258a328f9c061176. This distribution projects the
+retained intended reference into target-only JSON and includes exact healthy,
+faulty, corrected and uncovered native target/mask captures. Per-array values,
+dtypes and source identities are unchanged; provenance.json records hashes.
+No model weights, images, original full dataset or native framework is included.
+RoboClue replay software has its separate repository software license.
+No NVIDIA endorsement is implied.

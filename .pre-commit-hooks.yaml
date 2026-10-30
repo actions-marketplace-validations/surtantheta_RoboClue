@@ -1,0 +1,8 @@
+- id: roboclue-config
+  name: RoboClue reviewed JSON comparison
+  description: Compare configured small JSON artifacts with independently reviewed references; no dataset scan
+  entry: python -I -m roboclue.automation pre-commit --manifest .roboclue-precommit.json --
+  language: python
+  files: '\.json$'
+  pass_filenames: true
+  require_serial: true

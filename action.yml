@@ -1,0 +1,51 @@
+name: RoboClue diagnostic gate
+description: Run explicitly declared robot-learning checks before consuming changed artifacts
+inputs:
+  manifest:
+    description: Workspace-relative JSON manifest declaring required checks
+    required: false
+    default: .roboclue-ci.json
+  allow-hub:
+    description: Allow bounded public Hub intake (also requires fetch=true and an immutable revision in the manifest)
+    required: false
+    default: 'false'
+outputs:
+  report-directory:
+    description: New directory containing aggregate and original per-check JSON receipts
+    value: ${{ steps.check.outputs.report-directory }}
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: Install the reviewed action source in its own environment
+      id: install
+      shell: bash
+      run: |
+        set -euo pipefail
+        umask 077
+        environment_dir=$(mktemp -d "$RUNNER_TEMP/roboclue-action.XXXXXXXX")
+        python -I -m venv "$environment_dir"
+        "$environment_dir/bin/python" -I -m pip install "${GITHUB_ACTION_PATH}[dataset]"
+        printf 'python=%s\n' "$environment_dir/bin/python" >> "$GITHUB_OUTPUT"
+    - name: Run declared checks without executing artifact commands
+      id: check
+      shell: bash
+      env:
+        ROBOCLUE_PYTHON: ${{ steps.install.outputs.python }}
+        ROBOCLUE_MANIFEST: ${{ inputs.manifest }}
+        ROBOCLUE_ALLOW_HUB: ${{ inputs.allow-hub }}
+      run: |
+        set -euo pipefail
+        umask 077
+        report_parent=$(mktemp -d "$RUNNER_TEMP/roboclue-report.XXXXXXXX")
+        report_dir="$report_parent/report"
+        printf 'report-directory=%s\n' "$report_dir" >> "$GITHUB_OUTPUT"
+        arguments=(--manifest "$ROBOCLUE_MANIFEST" --workspace "$GITHUB_WORKSPACE" --output "$report_dir")
+        case "$ROBOCLUE_ALLOW_HUB" in
+          true) arguments+=(--allow-hub) ;;
+          false) ;;
+          *) printf '%s\n' 'allow-hub must be true or false' >&2; exit 2 ;;
+        esac
+        "$ROBOCLUE_PYTHON" -I -m roboclue.automation run "${arguments[@]}"

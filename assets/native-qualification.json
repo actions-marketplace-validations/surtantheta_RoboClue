@@ -1,0 +1,87 @@
+{
+  "corrected_steps": 2,
+  "criterion_sha256": "758d5c621e178a3d5cfbda6995a02b1fbd35b00cf1e695d41815929e52b5f898",
+  "delivered_files": 572,
+  "focused_tests_per_runtime": 61,
+  "guarded_wrong_forward_calls": 0,
+  "guarded_wrong_steps": 0,
+  "healthy_corrected_replay_active_slice_sha256": "483716c2bc262b79d8d3547180a3bbf8ea5dcf6e7d38074bb56609072b7e7fc7",
+  "independent_human_trial": false,
+  "installation_seconds": 188.26360731292516,
+  "job": "136277.caquelon",
+  "manifest_sha256": "ee60b648534e899f7255cd7321cb941b946eba95f7f20bd449469fae8f271eec",
+  "native_shard_samples": [
+    7,
+    8
+  ],
+  "network_or_old_home_required": false,
+  "numeric_audit_sha256": "ff9a90d61ef8dd8399172c9be76570ee71eba6fff3521c7b4d3f89b2d943428f",
+  "numerical_source_postguards": "pass",
+  "payload_bytes": 8134410988,
+  "preview_wheel_sha256": "10648a4ea3a75a3f162df3b09907af9775410baba4fe43eecadb28da90a2d49d",
+  "public_release": false,
+  "read_only_review_blockers": 0,
+  "references_regenerated_after_fault": false,
+  "scope": "Pinned GR00T N1.7 startup target/mask preservation, offline portable install and two optimizer steps on public simulation data; later training, other frameworks, physical behavior and human usefulness remain unassessed.",
+  "source_files": {
+    "examples/gr00t_training_guard/install.py": "a390196578f8db6003887c2e7a48b033f3068f2e1aa2ef86a700cbb025ef3490",
+    "examples/gr00t_training_guard/train.py": "fe2b546c449227b68da1e9914f391c381b3ea6755ab5e17808a7f3d6829135cc",
+    "examples/gr00t_training_guard/verify.py": "614b58e88a1ac523d7fc66a5b7a9a5982b6b059a9ea27167311fb9e1a745d7de",
+    "src/policy_doctor/groot_training_guard.py": "1b9ecd551264b33dbf379155f9d329a3f1db0f7710936887244f8e44884d898b",
+    "tests/test_groot_training_guard.py": "1a670280f7de63460cfb91ba56f44d536b86c58c43b32f1f106b8cdcb6cfd329"
+  },
+  "status": "TECHNICALLY_QUALIFIED_PORTABLE_NATIVE_GR00T_PROFILE",
+  "target_differences": 1400,
+  "terminals": {
+    "136212.caquelon": {
+      "Exit_status": 0,
+      "Stageout_status": 0,
+      "job_state": "F",
+      "run_count": 1
+    },
+    "136245.caquelon": {
+      "Exit_status": 0,
+      "Stageout_status": 0,
+      "job_state": "F",
+      "run_count": 1
+    },
+    "136248.caquelon": {
+      "Exit_status": 0,
+      "Stageout_status": 0,
+      "job_state": "F",
+      "run_count": 1
+    },
+    "136251.caquelon": {
+      "Exit_status": 0,
+      "Stageout_status": 0,
+      "job_state": "F",
+      "run_count": 1
+    },
+    "136252.caquelon": {
+      "Exit_status": 0,
+      "Stageout_status": 0,
+      "job_state": "F",
+      "run_count": 1
+    },
+    "136253.caquelon": {
+      "Exit_status": 0,
+      "Stageout_status": 0,
+      "job_state": "F",
+      "run_count": 1
+    },
+    "136254.caquelon": {
+      "Exit_status": 0,
+      "Stageout_status": 0,
+      "job_state": "F",
+      "run_count": 1
+    },
+    "136258.caquelon": {
+      "Exit_status": 0,
+      "Stageout_status": 0,
+      "job_state": "F",
+      "run_count": 1
+    }
+  },
+  "whole_041_release_qualified": false,
+  "wrong_native_steps": 2
+}

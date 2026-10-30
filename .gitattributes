@@ -1,0 +1,3 @@
+# Preserve the exact bytes of pinned upstream fixtures used by source checks.
+tests/fixtures/** -text
+*.safetensors binary

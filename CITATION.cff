@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use RoboClue in your work, please cite this software and the upstream frameworks and datasets used in your experiment."
+type: software
+title: RoboClue
+abstract: "Evidence-backed diagnostics and retained-criterion verification for supported robot-learning pipelines."
+authors:
+  - family-names: Sur
+    given-names: Tanuj
+license:
+  - MIT
+  - Apache-2.0
+  - BSD-3-Clause

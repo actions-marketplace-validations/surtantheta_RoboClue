@@ -1,0 +1,69 @@
+{
+  "applies_when": [
+    {
+      "checkpoint_id_in": [
+        "2toINF/X-VLA-Libero"
+      ]
+    }
+  ],
+  "claim_basis": "release_metadata",
+  "evidence": [
+    {
+      "basis": "publisher_recipe",
+      "quote": "parser.add_argument(\"--init_seed\", type=int, default=42, help=\"Random seed\")",
+      "source": {
+        "line": 387,
+        "path": "evaluation/libero/libero_client.py",
+        "repo": "2toINF/X-VLA",
+        "sha": "6c4ecfb8be458ae7c0c96094e4b0add4174f4fe2"
+      },
+      "url": "https://github.com/2toINF/X-VLA/blob/6c4ecfb8be458ae7c0c96094e4b0add4174f4fe2/evaluation/libero/libero_client.py#L387"
+    },
+    {
+      "basis": "publisher_recipe",
+      "quote": "--model_path 2toINF/X-VLA-Libero",
+      "source": {
+        "line": 30,
+        "path": "evaluation/libero/README.md",
+        "repo": "2toINF/X-VLA",
+        "sha": "6c4ecfb8be458ae7c0c96094e4b0add4174f4fe2"
+      },
+      "url": "https://github.com/2toINF/X-VLA/blob/6c4ecfb8be458ae7c0c96094e4b0add4174f4fe2/evaluation/libero/README.md#L30"
+    }
+  ],
+  "first_fix": "set init_seed to 42 to reproduce the published setup",
+  "healthy_controls": [
+    "The declared checkpoint with integer init_seed=42: consistent",
+    "An explicitly selected unrelated stack with init_seed=43: not_applicable"
+  ],
+  "id": "RECIPE-LIBERO-XVLA",
+  "kind": "recipe",
+  "last_verified": "2026-10-29",
+  "recipe_field": {
+    "checkpoint": "2toINF/X-VLA-Libero",
+    "field": "init_seed",
+    "published_value": 42,
+    "source_index": 0,
+    "status": "published"
+  },
+  "schema_version": 1,
+  "severity": "WARNING",
+  "stacks": [
+    "x-vla"
+  ],
+  "title": "Compare the explicit typed evaluation configuration with the pinned publisher recipe",
+  "unknown_when": "Supply the actual resolved evaluation config containing typed init_seed, the explicit checkpoint_id and complete selected stacks. Launch flag strings and absent flags do not supply an actual config or default; no execution or historical training provenance is attested. Unrecognized checkpoint identities are UNKNOWN rather than evidenced unaffected checkpoints.",
+  "validation": {
+    "record": "content/VERDICT.md",
+    "status": "confirmed"
+  },
+  "violation_when": [
+    {
+      "config_key": {
+        "op": "ne",
+        "path": "init_seed",
+        "value": 42
+      }
+    }
+  ]
+}

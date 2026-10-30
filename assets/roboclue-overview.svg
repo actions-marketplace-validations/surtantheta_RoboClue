@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="430" viewBox="0 0 1280 430" role="img" aria-labelledby="title desc">
+  <title id="title">Find the first supported numeric difference</title>
+  <desc id="desc">Trace original recordings to exported labels and selected numeric samples. Separate changed files from changed values, and keep incomplete checks visible.</desc>
+  <rect width="1280" height="430" rx="22" fill="#0c1824"/>
+  <text x="56" y="67" fill="#78e3c4" font-family="sans-serif" font-size="23" font-weight="700">ROBOCLUE</text>
+  <text x="56" y="117" fill="#f4f7fb" font-family="sans-serif" font-size="34" font-weight="700">Your pipeline changed. What changed in its values?</text>
+  <g font-family="sans-serif">
+    <rect x="56" y="166" width="330" height="121" rx="12" fill="#172c3e" stroke="#35576c"/>
+    <text x="80" y="205" fill="#78e3c4" font-size="16">SOURCE</text>
+    <text x="80" y="244" fill="#f4f7fb" font-size="25" font-weight="700">Original recording</text>
+    <path d="M405 226h30m-9-8 9 8-9 8" fill="none" stroke="#78e3c4" stroke-width="3"/>
+    <rect x="455" y="166" width="330" height="121" rx="12" fill="#172c3e" stroke="#35576c"/>
+    <text x="479" y="205" fill="#78e3c4" font-size="16">ASSOCIATION</text>
+    <text x="479" y="244" fill="#f4f7fb" font-size="25" font-weight="700">Exported labels</text>
+    <path d="M804 226h30m-9-8 9 8-9 8" fill="none" stroke="#78e3c4" stroke-width="3"/>
+    <rect x="854" y="166" width="370" height="121" rx="12" fill="#172c3e" stroke="#35576c"/>
+    <text x="878" y="205" fill="#78e3c4" font-size="16">SUPPORTED PROCESSING</text>
+    <text x="878" y="244" fill="#f4f7fb" font-size="25" font-weight="700">Selected numeric values</text>
+    <text x="56" y="342" fill="#d1dfeb" font-size="23">Locate the mismatch. Cite the source. Repeat the check.</text>
+    <text x="56" y="385" fill="#a1b6c8" font-size="17">CLI + Python + MCP · explicit profiles and coverage · incomplete evidence stays UNKNOWN</text>
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "record_status": "blank_template_not_an_observation",
+  "operator_kind": null,
+  "participant_reference": null,
+  "case_reference": null,
+  "independently_supplied_real_input": null,
+  "stack_and_native_formats": [],
+  "question_and_decision": null,
+  "current_workaround_and_maintained_helpers": null,
+  "answerability_and_scope_frozen_before_attempt": null,
+  "reference_authority_and_held_answer": null,
+  "input_hashes_and_permissions": [],
+  "product_version_and_wheel_sha256": null,
+  "client_model_and_dependency_versions": null,
+  "baseline_and_product_assignment": null,
+  "prior_answer_exposure_and_learning_effects": null,
+  "operation_definition_and_common_budget": null,
+  "supplied_shared_setup_and_allocation": [],
+  "routes": {
+    "native_baseline": {"attempts": [], "whole_job_complete": null},
+    "roboclue": {"attempts": [], "whole_job_complete": null}
+  },
+  "attempt_record_fields": [
+    "phase", "hands_on_seconds", "elapsed_seconds", "machine_seconds",
+    "manual_operations", "new_helper_authorship_seconds", "code_written",
+    "commands_and_exit_codes", "answer_and_evidence", "mistakes",
+    "interruptions", "abandonment", "omitted_evidence"
+  ],
+  "phases": [
+    "installation", "input_and_reference_preparation", "diagnosis",
+    "correction_acquisition_and_check", "retained_handoff",
+    "independent_relocation_reproduction", "later_input_reuse"
+  ],
+  "independent_adjudication": {
+    "reviewer_reference": null,
+    "evidence_independent_of_product_status": null,
+    "baseline_supported_answer": null,
+    "product_supported_answer": null,
+    "false_fault_or_false_pass": null,
+    "physical_or_causal_claim_supported": null
+  },
+  "handoff_kind_and_colleague_outcome": null,
+  "stated_reuse_intention": null,
+  "follow_up_permission": null,
+  "follow_up_date": null,
+  "actual_voluntary_reuse_and_evidence": null,
+  "retained_in_real_issue_ci_or_fix": null,
+  "sharing_permissions": {
+    "quote": null,
+    "name": null,
+    "artifacts": null,
+    "results": null,
+    "upstream_contact": null
+  },
+  "limitations_and_null_results": null
+}

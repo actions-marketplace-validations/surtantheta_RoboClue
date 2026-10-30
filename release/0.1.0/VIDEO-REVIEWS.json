@@ -1,0 +1,28 @@
+{
+  "video_sha256": {
+    "full": "4b6e289480d2742c6309533636403f9a12f0446e4f48011696524de53f088eee",
+    "square": "c772eaa71f40fca728ff5600eab88f634042d43ca6300243af581209c8a027da"
+  },
+  "aesthetics": {
+    "reviewer": "/root/aesthetics_validator",
+    "status": "PASS_FOR_OWNER_PREVIEW",
+    "remaining_blockers": [],
+    "method": "Actual encoded timed frames through4.7seconds and bothendcards; independent filehashes; not continuous playback.",
+    "finding": "First headline settles before the second begins, both have readable holds, and retimed robot movement fits the five-second sequence."
+  },
+  "vc_style": {
+    "reviewer": "/root/vc_video_review",
+    "status": "PASS_FOR_OWNER_PREVIEW",
+    "remaining_blockers": [],
+    "method": "AI reviewer applying the supplied VC brief to current encoded posters, sequential-motion samples and verification receipts.",
+    "finding": "Slower ordered reveals provide more breathing room without new claim or readability issues.",
+    "scope": "Editorial assessment, not investor endorsement or a measured audience-retention result."
+  },
+  "opening_seconds": 5,
+  "first_reveal_seconds": [0.1, 1.65],
+  "second_reveal_seconds": [1.9, 3.45],
+  "published_robot_source_rate": 0.6,
+  "effective_robot_playback_multiplier": 6,
+  "owner_approval_required_before_any_push": true,
+  "publication_performed": false
+}

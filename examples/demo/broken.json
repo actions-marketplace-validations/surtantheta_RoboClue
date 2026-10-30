@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "robot_type": "synthetic_arm",
+  "fps": 30,
+  "execute_steps": 20,
+  "features": {
+    "observation.state": {
+      "type": "STATE",
+      "shape": [
+        2
+      ],
+      "names": [
+        "shoulder",
+        "gripper"
+      ]
+    },
+    "action": {
+      "type": "ACTION",
+      "shape": [
+        2
+      ],
+      "names": [
+        "gripper",
+        "shoulder"
+      ]
+    }
+  },
+  "units": [
+    "deg",
+    "normalized"
+  ],
+  "frame": "joint",
+  "command_representation": "absolute",
+  "gripper_convention": "0_closed_1_open",
+  "training_contract": {
+    "units": [
+      "rad",
+      "normalized"
+    ],
+    "frame": "joint",
+    "command_representation": "absolute",
+    "gripper_convention": "0_closed_1_open"
+  },
+  "model_output_representation": "relative",
+  "limits": [
+    [
+      -20,
+      20
+    ],
+    [
+      0,
+      1
+    ]
+  ]
+}

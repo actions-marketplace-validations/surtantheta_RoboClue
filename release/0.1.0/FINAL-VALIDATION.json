@@ -1,0 +1,351 @@
+{
+  "status": "PASS_SEQUENTIAL_TIMING_VIDEO_VALIDATION",
+  "job": "141691.caquelon",
+  "videos": {
+    "full": {
+      "video": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/cuts/full/roboclue-full.mp4",
+      "sha256": "4b6e289480d2742c6309533636403f9a12f0446e4f48011696524de53f088eee",
+      "seconds": 45,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "full_decode": "PASS",
+      "frames": {
+        "poster": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/full-poster.png",
+          "at_seconds": 0,
+          "mean_rgb_error": 0.7814629951131687
+        },
+        "title-mid": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/full-title-mid.png",
+          "at_seconds": 0.75,
+          "mean_rgb_error": 1.0818396347736625
+        },
+        "first-settled": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/full-first-settled.png",
+          "at_seconds": 1.7,
+          "mean_rgb_error": 0.8008373521090535
+        },
+        "gap": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/full-gap.png",
+          "at_seconds": 1.8,
+          "mean_rgb_error": 0.7932553690843621
+        },
+        "second-start": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/full-second-start.png",
+          "at_seconds": 2.05,
+          "mean_rgb_error": 1.3015621784979423
+        },
+        "second-mid": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/full-second-mid.png",
+          "at_seconds": 2.65,
+          "mean_rgb_error": 0.8972511574074075
+        },
+        "second-settled": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/full-second-settled.png",
+          "at_seconds": 3.55,
+          "mean_rgb_error": 0.8110773533950617
+        },
+        "intro-held": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/full-intro-held.png",
+          "at_seconds": 4.7,
+          "mean_rgb_error": 0.8325175218621399
+        },
+        "endcard": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/full-endcard.png",
+          "at_seconds": 44,
+          "mean_rgb_error": 0.035109953703703706
+        },
+        "benefit": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/full-benefit.png",
+          "at_seconds": 33,
+          "mean_rgb_error": 0.07362107767489712
+        }
+      },
+      "headline_motion_mean_rgb_delta": 19.430691964285714,
+      "subtitle_motion_mean_rgb_delta": 19.109005310457515,
+      "subtitle_settling_mean_rgb_delta": 8.167152777777778,
+      "timing": {
+        "duration": 5.0,
+        "first_reveal": [
+          0.1,
+          1.6500000000000001
+        ],
+        "second_reveal": [
+          1.9,
+          3.45
+        ],
+        "source_robot_rate": 0.6,
+        "effective_robot_playback": "6x"
+      },
+      "sampled_visible_captions": {
+        "0": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting"
+        ],
+        "0.75": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting"
+        ],
+        "1.7": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting"
+        ],
+        "1.8": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting"
+        ],
+        "2.05": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting",
+          "Training can still run"
+        ],
+        "2.65": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting",
+          "Training can still run"
+        ],
+        "3.55": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting",
+          "Training can still run"
+        ],
+        "4.7": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting",
+          "Training can still run"
+        ],
+        "6": [
+          "Before you train",
+          "Check your setup",
+          "RoboClue points to the mismatch and the fix"
+        ],
+        "10": [
+          "Before you train",
+          "Check your data",
+          "See the evidence and what to do next",
+          "recipes and versions"
+        ],
+        "18": [
+          "$ roboclue check recipe.json",
+          "A real configuration check",
+          "Evidence: config.json#n_action_steps=20.",
+          "Next: set n_action_steps to 10 to reproduce the published",
+          "RoboClue provenance register: WARNING.",
+          "See the source and the fix.",
+          "Source: fastwam.mdx:163; full pinned citation in structured",
+          "Your settings don't match.",
+          "evidence.",
+          "setup"
+        ],
+        "33": [
+          "Find what\u2019s wrong",
+          "See what to change"
+        ],
+        "44": [
+          "RoboClue",
+          "github.com/surtantheta/RoboClue"
+        ]
+      },
+      "two_item_endcard_mean_rgb_error": 0.035109953703703706,
+      "renderer_sha256": "85966134b68e4b7677d2d298e2b696ce2c27bef9d62f3945e78ecec48e028c00",
+      "source_capture_sha256": "3eda50e84ba73ad4ad6c6251dc8866b2ecb6857bfc5f3235d97473c03394570a",
+      "stdout_sha256": "5fc374969691f793ba4fc3eedd2b8f75503af9aae6fbe5ea8aa20979e55496ef",
+      "license": "CC-BY-SA-4.0"
+    },
+    "square": {
+      "video": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/cuts/square/roboclue-square.mp4",
+      "sha256": "c772eaa71f40fca728ff5600eab88f634042d43ca6300243af581209c8a027da",
+      "seconds": 25,
+      "width": 1080,
+      "height": 1080,
+      "fps": 30,
+      "full_decode": "PASS",
+      "frames": {
+        "poster": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/square-poster.png",
+          "at_seconds": 0,
+          "mean_rgb_error": 0.7614277549154093
+        },
+        "title-mid": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/square-title-mid.png",
+          "at_seconds": 0.75,
+          "mean_rgb_error": 0.9028717992684042
+        },
+        "first-settled": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/square-first-settled.png",
+          "at_seconds": 1.7,
+          "mean_rgb_error": 0.8158333333333333
+        },
+        "gap": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/square-gap.png",
+          "at_seconds": 1.8,
+          "mean_rgb_error": 0.8056670096021948
+        },
+        "second-start": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/square-second-start.png",
+          "at_seconds": 2.05,
+          "mean_rgb_error": 1.1720044581618656
+        },
+        "second-mid": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/square-second-mid.png",
+          "at_seconds": 2.65,
+          "mean_rgb_error": 0.8941272290809328
+        },
+        "second-settled": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/square-second-settled.png",
+          "at_seconds": 3.55,
+          "mean_rgb_error": 0.8161368312757201
+        },
+        "intro-held": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/square-intro-held.png",
+          "at_seconds": 4.7,
+          "mean_rgb_error": 0.8532590306355738
+        },
+        "endcard": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/square-endcard.png",
+          "at_seconds": 24,
+          "mean_rgb_error": 0.03687785779606767
+        },
+        "benefit": {
+          "path": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-timing/validation/square-benefit.png",
+          "at_seconds": 6,
+          "mean_rgb_error": 0.16804326703246455
+        }
+      },
+      "headline_motion_mean_rgb_delta": 15.01241622574956,
+      "subtitle_motion_mean_rgb_delta": 13.53748366013072,
+      "subtitle_settling_mean_rgb_delta": 7.626988017429194,
+      "timing": {
+        "duration": 5.0,
+        "first_reveal": [
+          0.1,
+          1.6500000000000001
+        ],
+        "second_reveal": [
+          1.9,
+          3.45
+        ],
+        "source_robot_rate": 0.6,
+        "effective_robot_playback": "6x"
+      },
+      "sampled_visible_captions": {
+        "0": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting"
+        ],
+        "0.75": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting"
+        ],
+        "1.7": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting"
+        ],
+        "1.8": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting"
+        ],
+        "2.05": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting",
+          "Training can still run"
+        ],
+        "2.65": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting",
+          "Training can still run"
+        ],
+        "3.55": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting",
+          "Training can still run"
+        ],
+        "4.7": [
+          "NVIDIA Research footage at 6x playback",
+          "One wrong setting",
+          "Training can still run"
+        ],
+        "6": [
+          "Before you train",
+          "Check your data",
+          "See the evidence and what to do next",
+          "recipes and versions"
+        ],
+        "12": [
+          "$ roboclue check recipe.json",
+          "A real configuration check",
+          "Evidence:",
+          "Next: set n_action_steps to 10 to",
+          "RoboClue provenance register:",
+          "See the source and the fix.",
+          "Source: fastwam.mdx:163; full",
+          "WARNING.",
+          "Your settings don't match.",
+          "config.json#n_action_steps=20.",
+          "evidence.",
+          "pinned citation in structured",
+          "reproduce the published setup"
+        ],
+        "24": [
+          "RoboClue",
+          "github.com/surtantheta/RoboClue"
+        ]
+      },
+      "two_item_endcard_mean_rgb_error": 0.03687785779606767,
+      "renderer_sha256": "85966134b68e4b7677d2d298e2b696ce2c27bef9d62f3945e78ecec48e028c00",
+      "source_capture_sha256": "3eda50e84ba73ad4ad6c6251dc8866b2ecb6857bfc5f3235d97473c03394570a",
+      "stdout_sha256": "5fc374969691f793ba4fc3eedd2b8f75503af9aae6fbe5ea8aa20979e55496ef",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  "terminal_loop": {
+    "video": "/rhome/tanuj/projects/roboclue-production-20261029/pitch-release/cuts-robot/terminal/roboclue-terminal-loop.mp4",
+    "sha256": "e7ea6b3d6fff53d953b0e9f13bd2d6e658b794cda7f1915e522302297e3cdb2f",
+    "seconds": 12,
+    "scope": "Byte-identical to independently decoded141628 terminal loop; not rerendered."
+  },
+  "native_source_dimensions": [
+    1920,
+    1080
+  ],
+  "native_source_sha256": "f3db11b367ca963c7ff85d11f34a9b7cb1a11fd5ff9be3ebef245000fcbf6ec0",
+  "source_license": "CC-BY-SA-4.0",
+  "source_speed_disclosed": "Published10x source slowed to60percent, effective6x playback, as credited on screen.",
+  "visible_captions": [
+    "$ roboclue check recipe.json",
+    "A real configuration check",
+    "Before you train",
+    "Check your data",
+    "Check your setup",
+    "Evidence:",
+    "Evidence: config.json#n_action_steps=20.",
+    "Find what\u2019s wrong",
+    "NVIDIA Research footage at 6x playback",
+    "Next: set n_action_steps to 10 to",
+    "Next: set n_action_steps to 10 to reproduce the published",
+    "One wrong setting",
+    "RoboClue",
+    "RoboClue points to the mismatch and the fix",
+    "RoboClue provenance register:",
+    "RoboClue provenance register: WARNING.",
+    "See the evidence and what to do next",
+    "See the source and the fix.",
+    "See what to change",
+    "Source: fastwam.mdx:163; full",
+    "Source: fastwam.mdx:163; full pinned citation in structured",
+    "Training can still run",
+    "WARNING.",
+    "Your settings don't match.",
+    "config.json#n_action_steps=20.",
+    "evidence.",
+    "github.com/surtantheta/RoboClue",
+    "pinned citation in structured",
+    "recipes and versions",
+    "reproduce the published setup",
+    "setup"
+  ],
+  "endcard_only_name_and_url": true,
+  "publication_performed": false,
+  "owner_approval_required_before_any_push": true
+}

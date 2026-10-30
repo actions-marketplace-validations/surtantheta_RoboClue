@@ -1,0 +1,11 @@
+# Declared direct dependency floors; regression matrix only, not a production lock.
+numpy==1.24.0
+safetensors==0.4.0
+packaging==24.0
+mcp==1.28.0
+pyarrow==17.0.0
+h5py==3.10.0
+pytest==8.0.0
+ruff==0.9.0
+
+PyYAML==6.0.3

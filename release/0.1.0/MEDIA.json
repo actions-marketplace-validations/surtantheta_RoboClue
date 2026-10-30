@@ -1,0 +1,77 @@
+{
+  "status": "PASS_SEQUENTIAL_TIMING_MEDIA_FOR_OWNER_PREVIEW",
+  "videos": {
+    "full": {
+      "path": "/rhome/tanuj/projects/roboclue-production-20261029/public-release/repository-final/assets/launch/roboclue-full.mp4",
+      "sha256": "4b6e289480d2742c6309533636403f9a12f0446e4f48011696524de53f088eee",
+      "seconds": 45,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "license": "CC-BY-SA-4.0"
+    },
+    "square": {
+      "path": "/rhome/tanuj/projects/roboclue-production-20261029/public-release/repository-final/assets/launch/roboclue-square.mp4",
+      "sha256": "c772eaa71f40fca728ff5600eab88f634042d43ca6300243af581209c8a027da",
+      "seconds": 25,
+      "width": 1080,
+      "height": 1080,
+      "fps": 30,
+      "license": "CC-BY-SA-4.0"
+    },
+    "terminal": {
+      "path": "/rhome/tanuj/projects/roboclue-production-20261029/public-release/repository-final/assets/launch/roboclue-terminal-loop.mp4",
+      "sha256": "e7ea6b3d6fff53d953b0e9f13bd2d6e658b794cda7f1915e522302297e3cdb2f",
+      "seconds": 12,
+      "scope": "Unchanged captured CLI loop, independently decoded in141628."
+    }
+  },
+  "validation": "FINAL-VALIDATION.json",
+  "reviews": "VIDEO-REVIEWS.json",
+  "robot_source": {
+    "project": "DexMimicGen",
+    "authors": "Zhenyu Jiang, Yuqi Xie, Kevin Lin, Zhenjia Xu, Weikang Wan, Ajay Mandlekar, Linxi Fan, Yuke Zhu",
+    "institutions": [
+      "NVIDIA Research",
+      "UT Austin",
+      "UC San Diego"
+    ],
+    "project_url": "https://dexmimicgen.github.io/",
+    "source_url": "https://dexmimicgen.github.io/resources/real2sim2real.mp4",
+    "source_sha256": "f3db11b367ca963c7ff85d11f34a9b7cb1a11fd5ff9be3ebef245000fcbf6ec0",
+    "source_dimensions": [
+      1920,
+      1080
+    ],
+    "excerpt_start_seconds": 39,
+    "excerpt_duration_seconds": 3,
+    "crop": [
+      0,
+      0,
+      1920,
+      976
+    ],
+    "source_playback": "10x as labelled by the original project; no additional speed-up applied.",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "opening_animation": "Five-second opener: first1.55s reveal,0.25s pause, second1.55s reveal, then hold. Robot source slowed to0.6x publishedrate.",
+  "opening_timing": {
+    "duration": 5.0,
+    "first_reveal": [
+      0.1,
+      1.6500000000000001
+    ],
+    "second_reveal": [
+      1.9,
+      3.45
+    ],
+    "source_robot_rate": 0.6,
+    "effective_robot_playback": "6x"
+  },
+  "effective_robot_playback_multiplier": 6,
+  "opening_main_fonts_reduced": "About12percent versus previous HD static version.",
+  "endcard": "RoboClue and GitHub URL only",
+  "owner_approval_required_before_any_push": true,
+  "publication_performed": false
+}

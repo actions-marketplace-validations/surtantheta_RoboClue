@@ -1,0 +1,58 @@
+{
+  "applies_when": [
+    {
+      "launch_flag": {
+        "flag": "--task_suite_name",
+        "op": "eq",
+        "value": "libero_spatial"
+      }
+    }
+  ],
+  "claim_basis": "release_metadata",
+  "evidence": [
+    {
+      "basis": "user_report",
+      "quote": "3.4.0 and 3.8.1 agree to 5e-12 m: the change is at 3.4.0.",
+      "source": {
+        "line": 8,
+        "path": "libero/libero/benchmark/libero_suite_task_map.py",
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "sha": "8f1084e3132a39270c3a13ebe37270a43ece2a01"
+      },
+      "url": "https://github.com/huggingface/lerobot/issues/4390#issuecomment-6325404747"
+    }
+  ],
+  "first_fix": "Pin MuJoCo 3.3.2 in the LIBERO evaluation environment, which also avoids the reported LIBERO-Object rendering boundary, then compare with the same simulator release.",
+  "healthy_controls": [
+    "mujoco==3.3.2 with --task_suite_name libero_spatial (the oft#150 / FastWAM#71 recommendation): consistent",
+    "mujoco 3.8.1 with --task_suite_name libero_goal: not_applicable (clavis-systems measured at most 0.7 mm start-state change in libero_goal)"
+  ],
+  "id": "MUJOCO-GE340-LIBERO-SPATIAL-INIT-OPENVLA",
+  "kind": "version_trap",
+  "last_verified": "2026-10-29",
+  "launch_target": [
+    "script:experiments/robot/libero/run_libero_eval.py"
+  ],
+  "schema_version": 1,
+  "severity": "WARNING",
+  "stacks": [
+    "openvla",
+    "openvla-oft"
+  ],
+  "title": "MuJoCo >=3.4.0 on the declared libero_spatial evaluation crosses the publicly measured task-5 initial-state boundary; published scores may not be comparable; the open-ended threshold is a prospective risk warning, not verification of every later release",
+  "unknown_when": "Supply the complete selected stacks, one unambiguous applicable evaluation command and an exact MuJoCo release. This entry covers only the literal single-suite command; comma-separated, reordered or alternate suite encodings are outside its declared scope. Missing or repeated flags, ambiguous shell text, absent/conflicting versions remain UNKNOWN. Metadata does not attest execution. The threshold extrapolates the cited measured deviation as a prospective WARNING; arbitrary future release behavior has not been reproduced or source-proven.",
+  "validation": {
+    "record": "content/VERDICT.md",
+    "status": "confirmed"
+  },
+  "violation_when": [
+    {
+      "package_version": {
+        "package": "mujoco",
+        "version": {
+          "gte": "3.4.0"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "applies_when": [
+    {
+      "checkpoint_id_in": [
+        "nvidia/GR00T-N1.7-LIBERO"
+      ]
+    }
+  ],
+  "claim_basis": "release_metadata",
+  "evidence": [
+    {
+      "basis": "publisher_recipe",
+      "quote": "--n-action-steps 8",
+      "source": {
+        "line": 142,
+        "path": "examples/LIBERO/README.md",
+        "repo": "NVIDIA/Isaac-GR00T",
+        "sha": "c56f54128d92f743889b7e4cecfc1ceafd88739e"
+      },
+      "url": "https://github.com/NVIDIA/Isaac-GR00T/blob/c56f54128d92f743889b7e4cecfc1ceafd88739e/examples/LIBERO/README.md#L142"
+    },
+    {
+      "basis": "publisher_recipe",
+      "quote": "uv run hf download nvidia/GR00T-N1.7-LIBERO",
+      "source": {
+        "line": 119,
+        "path": "examples/LIBERO/README.md",
+        "repo": "NVIDIA/Isaac-GR00T",
+        "sha": "c56f54128d92f743889b7e4cecfc1ceafd88739e"
+      },
+      "url": "https://github.com/NVIDIA/Isaac-GR00T/blob/c56f54128d92f743889b7e4cecfc1ceafd88739e/examples/LIBERO/README.md#L119"
+    }
+  ],
+  "first_fix": "set n_action_steps to 8 to reproduce the published setup",
+  "healthy_controls": [
+    "The declared checkpoint with integer n_action_steps=8: consistent",
+    "An explicitly selected unrelated stack with n_action_steps=9: not_applicable"
+  ],
+  "id": "RECIPE-LIBERO-GROOT-N17",
+  "kind": "recipe",
+  "last_verified": "2026-10-29",
+  "recipe_field": {
+    "checkpoint": "nvidia/GR00T-N1.7-LIBERO",
+    "field": "n_action_steps",
+    "published_value": 8,
+    "source_index": 0,
+    "status": "published"
+  },
+  "schema_version": 1,
+  "severity": "WARNING",
+  "stacks": [
+    "groot"
+  ],
+  "title": "Compare the explicit typed evaluation configuration with the pinned publisher recipe",
+  "unknown_when": "Supply the actual resolved evaluation config containing typed n_action_steps, the explicit checkpoint_id and complete selected stacks. Launch flag strings and absent flags do not supply an actual config or default; no execution or historical training provenance is attested. Unrecognized checkpoint identities are UNKNOWN rather than evidenced unaffected checkpoints.",
+  "validation": {
+    "record": "content/VERDICT.md",
+    "status": "confirmed"
+  },
+  "violation_when": [
+    {
+      "config_key": {
+        "op": "ne",
+        "path": "n_action_steps",
+        "value": 8
+      }
+    }
+  ]
+}
