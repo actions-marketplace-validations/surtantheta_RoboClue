@@ -37,6 +37,35 @@ The latter supplies repositories and exact tested commits for deliberate upstrea
 revalidation workflows. Neither function widens a detector's supported versions
 or changes its numerical verdict.
 
+## Weekly upstream review
+
+The `upstream compatibility review` GitHub workflow runs two independent jobs:
+
+- **Portable adapter and diagnostic tests** fail when a regression test fails.
+- **Upstream source observations (review alerts)** compare each repository's
+  current HEAD with the recorded qualification commits. Known source changes
+  produce warnings and a job summary with comparison links. Missing or invalid
+  source identities fail the monitor, so unavailable evidence cannot pass silently.
+
+A green source-monitor job means the observations completed, including any
+pending review warnings. It does not establish compatibility with newer code.
+The JSON artifact retains `revalidation_required` when a source changes, and
+native qualification remains `not_rerun`. Review the affected code and rerun its
+source, adapter and native qualification before extending support or changing
+the recorded pins.
+
+For a strict local check, run:
+
+```sh
+python scripts/revalidate_upstream.py --fetch --output upstream-observations.json
+```
+
+The default command still returns 3 for changed or unavailable source identities,
+2 for input/output errors, and 0 when all identities match recorded pins. The
+workflow adds `--github-actions` to report known changes as review warnings;
+unavailable source identities return 2 in that mode. Neither mode runs native
+trainers or updates qualification records.
+
 Filesystem metadata reads are bounded regular-file reads: 64 KiB for METADATA or
 PKG-INFO and 8 KiB for direct_url.json. Named pipes, devices, symlinks, repeated
 identity fields, ambiguous distributions and malformed VCS identity stay unknown.
