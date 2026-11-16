@@ -9,6 +9,7 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
+from pathlib import Path
 
 MAX_RESPONSE = 2 * 1024**2
 
@@ -80,32 +81,68 @@ def _destination(value):
     return _output_destination(value)
 
 
+def github_report(results, summary_path):
+    """Report observed drift as review work; missing source evidence still fails."""
+    lines = ["## Upstream source review", "",
+             "This monitor compares source identities. A changed commit does not establish incompatibility.",
+             "Native qualification was not rerun; supported versions and recorded qualification pins are unchanged.",
+             "", "| Repository | Observation | Review |", "| --- | --- | --- |"]
+    unavailable = False
+    for item in results:
+        repository = item["repository"]  # Validated by observe before any request.
+        status = item["status"]
+        if status == "source_changed_requires_revalidation":
+            print(f"::warning title=Upstream review needed::{repository}: source changed; review the diff and rerun affected qualification before extending support.")
+            links = [f"[compare {pin[:7]}](https://github.com/{repository}/compare/{pin}...{item['observed_head']})"
+                     for pin in item["recorded_tested_commits"]]
+            observation, review = "Changed; qualification pending", ", ".join(links)
+        elif status == "matches_recorded_source_pin":
+            observation, review = "Matches a recorded source pin", "No new native qualification"
+        else:
+            unavailable = True
+            print(f"::error title=Upstream observation unavailable::{repository}: source identity could not be verified; check API access and retry.")
+            observation, review = "Unavailable", "Restore source evidence and retry"
+        lines.append(f"| {repository} | {observation} | {review} |")
+    lines.extend(["", "Review pending changes in the linked diffs. Retain new source, adapter and native execution evidence before updating qualification pins.", ""])
+    with Path(summary_path).open("a", encoding="utf-8") as stream:
+        stream.write("\n".join(lines))
+    return 2 if unavailable else 0
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--fetch", action="store_true", help="Explicitly allow bounded GitHub API observations")
     parser.add_argument("--output", required=True)
+    parser.add_argument("--github-actions", action="store_true",
+                        help="Report known source drift as warnings and a job summary; unavailable source evidence still fails")
     args = parser.parse_args(argv)
     try:
         destination = _destination(args.output)
         if not args.fetch:
             raise ValueError("Use --fetch to allow upstream source observations")
+        summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+        if args.github_actions and not summary_path:
+            raise ValueError("--github-actions requires GITHUB_STEP_SUMMARY")
         from policy_doctor.framework_versions import supported_framework_profiles
 
         profiles = supported_framework_profiles()
         results = [observe(profile) for profile in profiles["frameworks"]]
+        if not results:
+            raise ValueError("No upstream framework profiles were provided")
         clear = bool(results) and all(item["status"] == "matches_recorded_source_pin" for item in results)
         result = {"schema_version": 1, "kind": "upstream_revalidation_observation", "status": "recorded_pins_observed" if clear else "revalidation_required",
                   "frameworks": results, "native_framework_qualification": "not_rerun",
                   "scope": "Detects observed source drift and queues human review; portable regressions, source pins and version metadata do not qualify a new framework release."}
         with destination.open("x", encoding="utf-8") as stream:
             stream.write(json.dumps(result, indent=2, allow_nan=False) + "\n")
+        report_exit = github_report(results, summary_path) if args.github_actions else None
     except (ValueError, OSError) as error:
         print("Revalidation input: " + " ".join(str(error).split()), file=sys.stderr)
         return 2
     for item in results:
         print(item["framework"] + ": " + item["status"] + "; native qualification not rerun")
     print("Review and re-run the affected framework's source/adaptor/native qualification before extending support.")
-    return 0 if clear else 3
+    return report_exit if args.github_actions else (0 if clear else 3)
 
 
 if __name__ == "__main__":

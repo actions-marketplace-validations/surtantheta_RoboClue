@@ -69,6 +69,84 @@ def test_fetch_permission_is_required_before_observations(monkeypatch, tmp_path)
     assert not (tmp_path / "none.json").exists()
 
 
+@pytest.mark.parametrize("github_actions", [False, True])
+@pytest.mark.parametrize("head, expected", [("a" * 40, "recorded_pins_observed"), ("b" * 40, "revalidation_required"), (None, "revalidation_required")])
+def test_ci_reports_drift_without_hiding_missing_evidence(monkeypatch, tmp_path, capsys, github_actions, head, expected):
+    from policy_doctor import framework_versions
+
+    monkeypatch.setattr(framework_versions, "supported_framework_profiles", lambda: {"frameworks": [_profile()]})
+    monkeypatch.setattr(probe, "fetch_json", lambda url: {"sha": head} if url.endswith("HEAD") else {"tag_name": "v999"})
+    summary = tmp_path / "summary.md"
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(summary))
+    output = tmp_path / "observation.json"
+    args = ["--fetch", "--output", str(output)] + (["--github-actions"] if github_actions else [])
+    code = probe.main(args)
+    assert code == ((2 if head is None else 0) if github_actions else (0 if head == "a" * 40 else 3))
+    result = json.loads(output.read_text())
+    assert result["status"] == expected
+    assert result["native_framework_qualification"] == "not_rerun"
+    assert result["frameworks"][0]["recorded_tested_commits"] == ["a" * 40]
+    logs = capsys.readouterr().out
+    if not github_actions:
+        assert not summary.exists()
+        assert "::warning" not in logs and "::error" not in logs
+    else:
+        text = summary.read_text()
+        assert "Native qualification was not rerun" in text
+        if head is None:
+            assert "::error title=Upstream observation unavailable::" in logs
+            assert "Unavailable" in text
+        elif head == "b" * 40:
+            assert "::warning title=Upstream review needed::" in logs
+            assert "Changed; qualification pending" in text
+            assert f"https://github.com/example/framework/compare/{'a' * 40}...{'b' * 40}" in text
+        else:
+            assert "::warning" not in logs and "::error" not in logs
+            assert "Matches a recorded source pin" in text
+
+
+def test_ci_mixed_drift_and_network_failure_is_not_success(monkeypatch, tmp_path, capsys):
+    from policy_doctor import framework_versions
+
+    profiles = [_profile(), dict(_profile(), id="unavailable", repository="example/unavailable")]
+    monkeypatch.setattr(framework_versions, "supported_framework_profiles", lambda: {"frameworks": profiles})
+
+    def fetch(url):
+        if "example/unavailable" in url:
+            raise OSError("secret must not appear")
+        return {"sha": "b" * 40} if url.endswith("HEAD") else {"tag_name": "v999"}
+
+    monkeypatch.setattr(probe, "fetch_json", fetch)
+    summary = tmp_path / "summary.md"
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(summary))
+    output = tmp_path / "observation.json"
+    assert probe.main(["--fetch", "--github-actions", "--output", str(output)]) == 2
+    logs = capsys.readouterr().out
+    assert "::warning" in logs and "::error" in logs
+    assert "secret" not in logs + output.read_text() + summary.read_text()
+
+
+def test_ci_requires_summary_destination_before_fetch(monkeypatch, tmp_path):
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    monkeypatch.setattr(probe, "fetch_json", lambda *_: pytest.fail("network intake without summary"))
+    assert probe.main(["--fetch", "--github-actions", "--output", str(tmp_path / "none.json")]) == 2
+    assert not (tmp_path / "none.json").exists()
+
+
+def test_ci_summary_write_failure_is_not_success(monkeypatch, tmp_path):
+    monkeypatch.setattr(probe, "fetch_json", lambda url: {"sha": "b" * 40} if url.endswith("HEAD") else {"tag_name": "v999"})
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(tmp_path / "missing" / "summary.md"))
+    assert probe.main(["--fetch", "--github-actions", "--output", str(tmp_path / "observation.json")]) == 2
+
+
+def test_empty_profile_catalog_is_not_success(monkeypatch, tmp_path):
+    from policy_doctor import framework_versions
+
+    monkeypatch.setattr(framework_versions, "supported_framework_profiles", lambda: {"frameworks": []})
+    assert probe.main(["--fetch", "--output", str(tmp_path / "none.json")]) == 2
+    assert not (tmp_path / "none.json").exists()
+
+
 def test_workflow_has_manual_and_weekly_review_without_publication():
     import yaml
 
@@ -76,5 +154,12 @@ def test_workflow_has_manual_and_weekly_review_without_publication():
     document = yaml.safe_load(path.read_text())
     assert "workflow_dispatch" in document["on"] and document["on"]["schedule"]
     assert document["permissions"] == {"contents": "read"}
+    assert "pull_request" in document["on"]
+    tests = document["jobs"]["portable-regressions"]
+    monitor = document["jobs"]["upstream-source-monitor"]
+    assert "needs" not in tests and "needs" not in monitor
+    assert any("pytest" in step.get("run", "") for step in tests["steps"])
+    assert any("--github-actions" in step.get("run", "") for step in monitor["steps"])
+    assert all(not step.get("continue-on-error") for job in document["jobs"].values() for step in job["steps"])
     text = path.read_text()
     assert "native GPU" in text and "issues: write" not in text and "pull-requests: write" not in text
